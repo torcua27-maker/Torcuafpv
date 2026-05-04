@@ -1,43 +1,63 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TorcuaFPV — Piloto FPV Cinematográfico | Badajoz</title>
-<meta name="description" content="Piloto FPV profesional en Badajoz, Extremadura. Vídeos de alta calidad para turismo, eventos, inmobiliarias y marcas. Edición profesional en DaVinci Resolve Studio.">
+<title>TorcuaFPV — Piloto FPV Cinematográfico | Badajoz, Extremadura</title>
+<meta name="description" content="Torcua, piloto FPV profesional en Badajoz, Extremadura. Vídeo aéreo cinematográfico para turismo, eventos, inmobiliarias y marcas. Edición en DaVinci Resolve Studio.">
+<meta name="keywords" content="piloto FPV Badajoz, dron Extremadura, vídeo aéreo Badajoz, FPV cinematográfico, dron bodas Extremadura, dron turismo Badajoz, torcuafpv">
+<meta name="author" content="Torcuato — TorcuaFPV">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://torcuafpv.netlify.app">
+<meta property="og:title" content="TorcuaFPV — Piloto FPV Cinematográfico | Badajoz">
+<meta property="og:description" content="Vídeo aéreo FPV que captura miradas, emociones y clientes en los primeros segundos. Badajoz, Extremadura.">
+<meta property="og:image" content="https://raw.githubusercontent.com/torcua27-maker/Torcuafpv/main/torcua.JPG">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TorcuaFPV — Piloto FPV Cinematográfico | Badajoz">
+<meta name="twitter:description" content="Vídeo aéreo FPV que captura miradas, emociones y clientes en los primeros segundos.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/torcua27-maker/Torcuafpv/main/torcua.JPG">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Tenor+Sans&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
---gold:#C9A84C;
---gold-light:#E8C96A;
---gold-dim:#7A6328;
---black:#000000;
---black-card:#0D0D0D;
---white:#F5F0E8;
---white-dim:#8A8478;
---font-display:'Cormorant Garamond',serif;
---font-body:'Tenor Sans',sans-serif;
-}
+:root{--gold:#C9A84C;--gold-light:#E8C96A;--gold-dim:#7A6328;--black:#000;--black-card:#0D0D0D;--white:#F5F0E8;--white-dim:#8A8478;--font-display:'Cormorant Garamond',serif;--font-body:'Tenor Sans',sans-serif}
 html{scroll-behavior:smooth}
-body{background:#000;color:#F5F0E8;font-family:'Tenor Sans',sans-serif;overflow-x:hidden}
+body{background:#000;color:#F5F0E8;font-family:'Tenor Sans',sans-serif;overflow-x:hidden;position:relative}
+body::after{content:'';position:fixed;bottom:0;left:0;right:0;height:55vh;background:radial-gradient(ellipse 80% 100% at 50% 100%,rgba(180,80,0,.13) 0%,rgba(201,120,20,.07) 30%,rgba(180,60,0,.04) 60%,transparent 100%);pointer-events:none;z-index:0}
 ::selection{background:#7A6328;color:#F5F0E8}
-::-webkit-scrollbar{width:3px}
-::-webkit-scrollbar-track{background:#000}
-::-webkit-scrollbar-thumb{background:#7A6328}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:#000}::-webkit-scrollbar-thumb{background:#7A6328}
+#loader{position:fixed;inset:0;background:#000;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;transition:opacity .8s,visibility .8s}
+#loader.hidden{opacity:0;visibility:hidden}
+.loader-logo{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:600;letter-spacing:.25em;color:#C9A84C;text-transform:uppercase;opacity:0;animation:fadeUp .8s .2s forwards}
+.loader-logo span{color:#F5F0E8;font-weight:300}
+.loader-bar{width:160px;height:1px;background:rgba(201,168,76,.2);position:relative;overflow:hidden}
+.loader-bar::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:#C9A84C;animation:loaderSlide 1.4s .3s ease forwards}
+@keyframes loaderSlide{from{left:-100%}to{left:0}}
+.cursor{position:fixed;width:10px;height:10px;background:#C9A84C;border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .1s,opacity .3s;mix-blend-mode:difference}
+.cursor-ring{position:fixed;width:36px;height:36px;border:1px solid rgba(201,168,76,.5);border-radius:50%;pointer-events:none;z-index:9997;transform:translate(-50%,-50%);transition:transform .18s ease,width .3s,height .3s,opacity .3s}
+.divider{padding:0 4rem}
+.divider-line{height:1px;display:flex;align-items:center;justify-content:center;gap:1rem}
+.divider-line::before,.divider-line::after{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,rgba(201,168,76,.2))}
+.divider-line::after{background:linear-gradient(to left,transparent,rgba(201,168,76,.2))}
+.divider-diamond{width:6px;height:6px;background:#C9A84C;transform:rotate(45deg);flex-shrink:0;opacity:.7}
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:500;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:all .3s;text-decoration:none}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 30px rgba(37,211,102,.6)}
+.wa-float svg{width:28px;height:28px;fill:#fff}
 canvas#particles{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.3}
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;transition:all .5s}
 nav.scrolled{background:rgba(0,0,0,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(201,168,76,.1)}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;letter-spacing:.2em;color:#C9A84C;text-decoration:none;text-transform:uppercase;-webkit-text-fill-color:#C9A84C}
 .nav-logo span{color:#F5F0E8;font-weight:300;-webkit-text-fill-color:#F5F0E8}
 .nav-right{display:flex;align-items:center;gap:1.5rem}
-.nav-links{display:flex;gap:1.8rem;list-style:none}
-.nav-links a{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:#8A8478;text-decoration:none;transition:color .25s}
+.nav-links{display:flex;gap:1.2rem;list-style:none}
+.nav-links a{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:#8A8478;text-decoration:none;transition:color .25s}
 .nav-links a:hover{color:#C9A84C}
-.nav-cta{display:flex;align-items:center;gap:.55rem;background:#C9A84C;color:#000;font-family:'Tenor Sans',sans-serif;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;padding:.6rem 1.4rem;text-decoration:none;transition:all .25s;white-space:nowrap}
+.nav-cta{display:flex;align-items:center;gap:.55rem;background:#C9A84C;color:#000;font-family:'Tenor Sans',sans-serif;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;padding:.65rem 1.5rem;text-decoration:none;transition:all .25s;white-space:nowrap}
 .nav-cta:hover{background:#E8C96A;transform:translateY(-1px)}
 .nav-cta svg{width:15px;height:15px;flex-shrink:0}
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:7rem 2rem 9rem;overflow:hidden}
@@ -45,67 +65,66 @@ nav.scrolled{background:rgba(0,0,0,.92);backdrop-filter:blur(16px);border-bottom
 .hero-video-bg iframe{position:absolute;top:50%;left:50%;width:177.78vh;height:100vh;min-width:100%;min-height:56.25vw;transform:translate(-50%,-50%);pointer-events:none;opacity:.5}
 .hero-video-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.6) 0%,rgba(0,0,0,.35) 40%,rgba(0,0,0,.8) 100%)}
 .hero-content{position:relative;z-index:2}
-.hero-eyebrow{font-family:'Tenor Sans',sans-serif;font-size:.68rem;letter-spacing:.4em;text-transform:uppercase;color:#C9A84C;margin-bottom:2rem;opacity:0;animation:fadeUp .8s .4s forwards}
+.hero-eyebrow{font-family:'Tenor Sans',sans-serif;font-size:.82rem;letter-spacing:.35em;text-transform:uppercase;color:#C9A84C;margin-bottom:2rem;opacity:0;animation:fadeUp .8s .4s forwards}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,9vw,8rem);font-weight:300;line-height:.95;color:#F5F0E8;margin-bottom:1.8rem;opacity:0;animation:fadeUp 1s .6s forwards}
 .hero h1 em{font-style:italic;color:#C9A84C;display:block}
 .hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2.2vw,1.3rem);font-weight:300;font-style:italic;color:rgba(245,240,232,.8);max-width:520px;margin:0 auto 2.5rem;line-height:1.8;opacity:0;animation:fadeUp .9s .8s forwards}
-.hero-promise{display:inline-flex;align-items:center;gap:.7rem;border:1px solid rgba(201,168,76,.35);padding:.55rem 1.4rem;font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:#C9A84C;margin-bottom:3.5rem;opacity:0;animation:fadeUp .9s 1s forwards}
+.hero-promise{display:inline-flex;align-items:center;gap:.7rem;border:1px solid rgba(201,168,76,.35);padding:.55rem 1.4rem;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:#C9A84C;margin-bottom:3.5rem;opacity:0;animation:fadeUp .9s 1s forwards}
 .hero-promise::before{content:'';width:5px;height:5px;background:#C9A84C;border-radius:50%;flex-shrink:0}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:1.2rem;justify-content:center;opacity:0;animation:fadeUp .9s 1.2s forwards}
 .scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.6rem;opacity:0;animation:fadeUp .9s 1.8s forwards;z-index:2}
 .scroll-hint span{font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(245,240,232,.4)}
 .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,#C9A84C,transparent);animation:scrollPulse 2.5s infinite}
-.btn-primary{display:inline-flex;align-items:center;gap:.75rem;background:#C9A84C;color:#000;font-family:'Tenor Sans',sans-serif;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;padding:.95rem 2.2rem;text-decoration:none;transition:all .3s}
+.btn-primary{display:inline-flex;align-items:center;gap:.75rem;background:#C9A84C;color:#000;font-family:'Tenor Sans',sans-serif;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;padding:1rem 2.4rem;text-decoration:none;transition:all .3s}
 .btn-primary:hover{background:#E8C96A;transform:translateY(-2px);box-shadow:0 10px 40px rgba(201,168,76,.35)}
 .btn-primary svg{width:18px;height:18px}
-.btn-secondary{display:inline-flex;align-items:center;gap:.75rem;border:1px solid rgba(201,168,76,.45);color:#C9A84C;font-family:'Tenor Sans',sans-serif;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;padding:.95rem 2.2rem;text-decoration:none;transition:all .3s}
+.btn-secondary{display:inline-flex;align-items:center;gap:.75rem;border:1px solid rgba(201,168,76,.45);color:#C9A84C;font-family:'Tenor Sans',sans-serif;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;padding:1rem 2.4rem;text-decoration:none;transition:all .3s}
 .btn-secondary:hover{border-color:#C9A84C;background:rgba(201,168,76,.06);transform:translateY(-2px)}
 section{position:relative;z-index:1}
-.divider{max-width:1200px;margin:0 auto;padding:0 2rem}
-.divider-line{height:1px;background:linear-gradient(to right,transparent,rgba(201,168,76,.18),transparent)}
-.section-label{font-size:.62rem;letter-spacing:.38em;text-transform:uppercase;color:#C9A84C;margin-bottom:1rem;display:block}
-.vsl-section{padding:6rem 2rem;max-width:1100px;margin:0 auto}
-.vsl-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;margin-bottom:3rem;color:#F5F0E8}
-.vsl-section h2 em{font-style:italic;color:#C9A84C}
-.vimeo-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:1px solid rgba(201,168,76,.18);box-shadow:0 30px 80px rgba(0,0,0,.8)}
-.vimeo-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%}
-.vsl-ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.8rem;background:#08080a}
-.vsl-ph p{font-family:'Cormorant Garamond',serif;font-style:italic;color:#8A8478;font-size:1.1rem}
-.about-section{padding:7rem 2rem;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
-.about-visual{position:relative;padding-bottom:2rem}
-.about-frame{width:100%;aspect-ratio:3/4;border:1px solid rgba(201,168,76,.18);position:relative;overflow:hidden;background:#060608}
+.section-label{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:#C9A84C;margin-bottom:1rem;display:block}
+.ticker-wrap{overflow:hidden;padding:1.2rem 0;border-top:1px solid rgba(201,168,76,.1);border-bottom:1px solid rgba(201,168,76,.1);background:#000;position:relative;z-index:1}
+.ticker-track{display:flex;width:max-content;animation:ticker 25s linear infinite}
+.ticker-track:hover{animation-play-state:paused}
+.ticker-item{display:flex;align-items:center;gap:1.5rem;padding:0 2rem;white-space:nowrap;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:#8A8478}
+.ticker-dot{width:4px;height:4px;background:#C9A84C;border-radius:50%;flex-shrink:0}
+.ticker-item strong{color:#C9A84C;font-weight:400}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.about-section{padding:5rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.about-visual{position:relative;padding-bottom:2rem;opacity:0;transform:translateY(40px);transition:opacity 1.2s cubic-bezier(.16,1,.3,1),transform 1.2s cubic-bezier(.16,1,.3,1)}
+.about-visual.visible{opacity:1;transform:translateY(0)}
+.about-frame{width:100%;aspect-ratio:4/4;border:1px solid rgba(201,168,76,.18);position:relative;overflow:hidden;background:#060608}
 .about-frame::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,#C9A84C,transparent)}
-.about-frame-inner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
-.about-frame-inner svg{width:55%;opacity:.1}
-.about-frame-glow{position:absolute;inset:0;background:radial-gradient(circle at 50% 55%,rgba(201,168,76,.055) 0%,transparent 70%)}
+.about-frame-glow{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.5) 0%,transparent 50%),radial-gradient(circle at 50% 55%,rgba(201,168,76,.04) 0%,transparent 70%)}
 .about-badge{position:absolute;bottom:0;right:-2rem;width:140px;height:140px;border-radius:50%;background:#C9A84C;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 0 50px rgba(201,168,76,.25)}
 .about-badge-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:#000;line-height:1}
 .about-badge-txt{font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;color:#000;font-weight:700;line-height:1.4;max-width:80px}
 .about-content h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.4rem);font-weight:300;line-height:1.05;margin-bottom:2rem}
 .about-content h2 em{font-style:italic;color:#C9A84C}
-.about-content p{color:#8A8478;line-height:2;font-size:.88rem;margin-bottom:1.2rem}
+.about-content p{color:#8A8478;line-height:2;font-size:1rem;margin-bottom:1.2rem}
 .about-stats{display:flex;gap:2.5rem;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid rgba(201,168,76,.12)}
 .about-stat-num{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:300;color:#C9A84C;display:block;line-height:1}
-.about-stat-lbl{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:#8A8478;margin-top:.3rem;display:block}
-.davinci-section{padding:6rem 2rem;max-width:1200px;margin:0 auto}
+.about-stat-lbl{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:#8A8478;margin-top:.3rem;display:block}
+.aesa-badge{display:inline-flex;align-items:center;gap:.8rem;border:1px solid rgba(201,168,76,.3);padding:.7rem 1.2rem;margin-top:1.8rem;background:rgba(201,168,76,.04)}
+.aesa-badge-icon{font-size:1.3rem}
+.aesa-badge-text{display:flex;flex-direction:column}
+.aesa-badge-title{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#C9A84C}
+.aesa-badge-sub{font-size:.7rem;color:#8A8478}
+.davinci-section{padding:5rem 4rem}
 .dv-inner{display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:center;border:1px solid rgba(201,168,76,.12);padding:4.5rem;background:linear-gradient(135deg,rgba(201,168,76,.025) 0%,transparent 55%)}
 .dv-left h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.1;margin-bottom:1.8rem}
 .dv-left h2 em{font-style:italic;color:#C9A84C}
-.dv-left p{color:#8A8478;line-height:2;font-size:.87rem;margin-bottom:1.1rem}
+.dv-left p{color:#8A8478;line-height:2;font-size:1rem;margin-bottom:1.1rem}
 .dv-feats{display:flex;flex-direction:column;gap:.9rem;margin-top:2rem}
 .dv-feat{display:flex;align-items:flex-start;gap:1rem;padding:1.2rem 1.5rem;background:rgba(201,168,76,.025);border-left:2px solid #7A6328;transition:all .3s}
 .dv-feat:hover{background:rgba(201,168,76,.055);border-left-color:#C9A84C;transform:translateX(5px)}
 .dv-feat-ico{font-size:1.2rem;flex-shrink:0;margin-top:.1rem}
-.dv-feat-ttl{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:#F5F0E8;display:block;margin-bottom:.3rem}
-.dv-feat-dsc{font-size:.79rem;color:#8A8478;line-height:1.65}
-.dv-right{display:flex;align-items:center;justify-content:center}
-.dv-logo-wrap{display:flex;flex-direction:column;align-items:center;gap:1.8rem}
-.dv-circle{width:190px;height:190px;border-radius:50%;background:linear-gradient(135deg,#1a1a2e,#0a0a0a);border:1px solid rgba(201,168,76,.2);display:flex;align-items:center;justify-content:center;box-shadow:0 0 60px rgba(201,168,76,.08);position:relative}
-.dv-circle::before{content:'';position:absolute;inset:10px;border-radius:50%;border:1px solid rgba(201,168,76,.08)}
-.dv-letters{font-family:'Cormorant Garamond',serif;font-size:4.5rem;font-weight:700;color:#C9A84C;line-height:1}
-.dv-lbl{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:#8A8478;text-align:center;line-height:1.7}
+.dv-feat-ttl{font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:#F5F0E8;display:block;margin-bottom:.3rem}
+.dv-feat-dsc{font-size:.9rem;color:#8A8478;line-height:1.7}
+.dv-right{display:flex;align-items:stretch;width:100%}
+.dv-logo-wrap{display:flex;flex-direction:column;align-items:center;gap:1rem;width:100%}
+.dv-lbl{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:#8A8478;text-align:center;line-height:1.7;margin-top:1.2rem}
 .dv-sub{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:#C9A84C;opacity:.65}
-.results-section{padding:6rem 2rem;max-width:1200px;margin:0 auto}
+.results-section{padding:5rem 4rem}
 .results-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;text-align:center;margin-bottom:4rem}
 .results-section h2 em{font-style:italic;color:#C9A84C}
 .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(201,168,76,.08)}
@@ -115,31 +134,131 @@ section{position:relative;z-index:1}
 .result-card:hover::after{transform:scaleX(1)}
 .result-icon{font-size:2.2rem;margin-bottom:1.8rem;display:block}
 .result-metric{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5vw,4.5rem);font-weight:300;color:#C9A84C;display:block;line-height:1;margin-bottom:.6rem}
-.result-title{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:#F5F0E8;display:block;margin-bottom:1rem}
-.result-desc{font-size:.83rem;color:#8A8478;line-height:1.8}
-.portfolio-section{padding:6rem 2rem;max-width:1300px;margin:0 auto}
+.result-title{font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:#F5F0E8;display:block;margin-bottom:1rem}
+.result-desc{font-size:.95rem;color:#8A8478;line-height:1.8}
+.portfolio-section{padding:5rem 4rem}
 .portfolio-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;text-align:center;margin-bottom:1rem}
 .portfolio-section h2 em{font-style:italic;color:#C9A84C}
 .pf-intro{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;color:#8A8478;font-size:1rem;margin-bottom:4rem}
 .pf-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;background:rgba(201,168,76,.06)}
-.pf-item{background:#000;overflow:hidden;position:relative}
+.pf-item{background:#000;overflow:hidden}
 .pf-video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
 .pf-video iframe{position:absolute;top:0;left:0;width:100%;height:100%;transition:transform .7s}
 .pf-item:hover .pf-video iframe{transform:scale(1.03)}
 .pf-info{padding:2rem 2.5rem 2.5rem;border-top:1px solid rgba(201,168,76,.07);position:relative}
 .pf-info::before{content:'';position:absolute;top:0;left:2.5rem;width:36px;height:2px;background:#C9A84C;transition:width .4s}
 .pf-item:hover .pf-info::before{width:80px}
-.pf-tag{font-size:.58rem;letter-spacing:.32em;text-transform:uppercase;color:#C9A84C;margin-bottom:.7rem;display:block}
-.pf-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;line-height:1.2;color:#F5F0E8;margin-bottom:.8rem}
-.pf-desc{font-size:.81rem;color:#8A8478;line-height:1.8;margin-bottom:1.2rem}
+.pf-tag{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:#C9A84C;margin-bottom:.7rem;display:block}
+.pf-title{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:400;line-height:1.2;color:#F5F0E8;margin-bottom:.8rem}
+.pf-desc{font-size:.95rem;color:#8A8478;line-height:1.8;margin-bottom:1.2rem}
 .pf-pills{display:flex;flex-wrap:wrap;gap:.5rem}
-.pf-pill{font-size:.57rem;letter-spacing:.15em;text-transform:uppercase;color:#8A8478;border:1px solid rgba(255,255,255,.07);padding:.27rem .72rem}
+.pf-pill{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:#8A8478;border:1px solid rgba(255,255,255,.07);padding:.3rem .8rem}
 .pf-placeholder{display:flex;align-items:center;justify-content:center;min-height:280px;background:#050507;border:1px dashed rgba(201,168,76,.14)}
 .pf-placeholder-inner{text-align:center;padding:2.5rem}
 .pf-placeholder-inner p{font-family:'Cormorant Garamond',serif;font-style:italic;color:#C9A84C;font-size:1.6rem;margin-bottom:.7rem}
 .pf-placeholder-inner small{font-size:.74rem;color:#8A8478;line-height:1.8;display:block;margin-bottom:1.4rem}
 .pf-placeholder-inner a{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#C9A84C;text-decoration:none;border-bottom:1px solid #7A6328;padding-bottom:2px}
-.ig-section{padding:6rem 2rem;max-width:1200px;margin:0 auto}
+.niches-section{padding:5rem 4rem}
+.niches-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;text-align:center;margin-bottom:4rem}
+.niches-section h2 em{font-style:italic;color:#C9A84C}
+.niches-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;background:rgba(201,168,76,.07)}
+.niche-card{background:#0D0D0D;padding:3rem 2.2rem;transition:all .4s;position:relative;overflow:hidden}
+.niche-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,#C9A84C,transparent);transform:scaleX(0);transition:transform .5s;transform-origin:center}
+.niche-card:hover::before{transform:scaleX(1)}
+.niche-icon{font-size:2rem;margin-bottom:1.8rem;display:block;transition:transform .3s}
+.niche-card:hover .niche-icon{transform:scale(1.2) rotate(-5deg)}
+.niche-name{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:400;color:#F5F0E8;display:block;margin-bottom:.5rem}
+.niche-price{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:.9rem}
+.niche-desc{font-size:.92rem;color:#8A8478;line-height:1.8}
+.zones-section{padding:5rem 4rem}
+.zones-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;text-align:center;margin-bottom:1rem}
+.zones-section h2 em{font-style:italic;color:#C9A84C}
+.zones-intro{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;color:#8A8478;font-size:1rem;margin-bottom:3.5rem}
+.zones-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(201,168,76,.06);margin-bottom:2.5rem}
+.zone-card{background:#0D0D0D;padding:2rem 1.8rem;text-align:center;transition:all .3s;position:relative}
+.zone-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:#C9A84C;transform:scaleX(0);transition:transform .4s;transform-origin:center}
+.zone-card:hover{background:#111}
+.zone-card:hover::after{transform:scaleX(1)}
+.zone-icon{font-size:1.8rem;display:block;margin-bottom:.8rem}
+.zone-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F5F0E8;display:block;margin-bottom:.3rem}
+.zone-desc{font-size:.8rem;color:#8A8478;line-height:1.6}
+.zones-note{text-align:center;font-size:.82rem;color:#8A8478;font-style:italic;font-family:'Cormorant Garamond',serif}
+.zones-note strong{color:#C9A84C;font-weight:400}
+.process-section{padding:5rem 4rem}
+.process-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;text-align:center;margin-bottom:5.5rem}
+.process-section h2 em{font-style:italic;color:#C9A84C}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.proc-line{position:absolute;top:30px;left:12.5%;right:12.5%;height:1px;z-index:0;overflow:hidden}
+.proc-line-inner{width:100%;height:100%;background:linear-gradient(to right,#7A6328,#C9A84C,#7A6328);position:relative}
+.proc-line-inner::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(to right,transparent,rgba(255,255,255,.5),transparent);animation:scanLine 2.5s infinite linear}
+.proc-step{text-align:center;padding:0 1.2rem;position:relative;z-index:1}
+.proc-num{width:60px;height:60px;border-radius:50%;background:#000;border:1px solid #C9A84C;display:flex;align-items:center;justify-content:center;margin:0 auto 2rem;font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:300;color:#C9A84C;transition:all .4s}
+.proc-step:hover .proc-num{background:#C9A84C;color:#000;box-shadow:0 0 30px rgba(201,168,76,.45)}
+.proc-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;color:#F5F0E8;margin-bottom:.7rem}
+.proc-desc{font-size:.9rem;color:#8A8478;line-height:1.8}
+.gear-section{padding:5rem 4rem}
+.gear-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;text-align:center;margin-bottom:1rem}
+.gear-section h2 em{font-style:italic;color:#C9A84C}
+.gear-intro{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;color:#8A8478;font-size:1rem;margin-bottom:4rem}
+.gear-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(201,168,76,.06)}
+.gear-card{background:#0D0D0D;padding:2.5rem 2rem;text-align:center;transition:all .4s;position:relative;border-bottom:2px solid transparent}
+.gear-card:hover{background:#111;border-bottom-color:#C9A84C}
+.gear-icon{font-size:2.5rem;margin-bottom:1.2rem;display:block;transition:transform .4s}
+.gear-card:hover .gear-icon{transform:scale(1.15) translateY(-4px)}
+.gear-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;color:#F5F0E8;display:block;margin-bottom:.4rem}
+.gear-type{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:.7rem}
+.gear-desc{font-size:.85rem;color:#8A8478;line-height:1.7}
+.faq-section{padding:5rem 4rem}
+.faq-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;text-align:center;margin-bottom:1rem}
+.faq-section h2 em{font-style:italic;color:#C9A84C}
+.faq-intro{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;color:#8A8478;font-size:1rem;margin-bottom:3.5rem}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(201,168,76,.06)}
+.faq-item{background:#0D0D0D;padding:0;cursor:pointer;transition:background .3s}
+.faq-item:hover{background:#111}
+.faq-question{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.8rem 2rem;font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:#F5F0E8;font-weight:400}
+.faq-arrow{width:20px;height:20px;border:1px solid rgba(201,168,76,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s;color:#C9A84C;font-size:.8rem}
+.faq-item.open .faq-arrow{background:#C9A84C;color:#000;transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-answer p{padding:0 2rem 1.8rem;font-size:.9rem;color:#8A8478;line-height:1.9}
+.faq-item.open .faq-answer{max-height:300px}
+.pricing-section{padding:5rem 4rem;text-align:center}
+.pricing-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;margin-bottom:4rem}
+.pricing-section h2 em{font-style:italic;color:#C9A84C}
+.pricing-card{border:1px solid rgba(201,168,76,.35);padding:4.5rem 4rem;max-width:620px;margin:0 auto;position:relative;background:linear-gradient(145deg,rgba(201,168,76,.04) 0%,transparent 60%)}
+.pricing-card::before{content:'RECOMENDADO';position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:#C9A84C;color:#000;font-size:.57rem;letter-spacing:.28em;padding:.35rem 1.2rem;font-family:'Tenor Sans',sans-serif;white-space:nowrap}
+.pricing-ttl{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#F5F0E8;margin-bottom:.3rem}
+.pricing-price{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:300;color:#C9A84C;display:block;margin:1.8rem 0 .5rem;line-height:1}
+.pricing-price small{font-size:.9rem;color:#8A8478;font-style:italic}
+.pricing-desc{font-size:1rem;color:#8A8478;line-height:1.9;margin-bottom:2.5rem}
+.pricing-feats{list-style:none;text-align:left;margin-bottom:3rem}
+.pricing-feats li{padding:.7rem 0;border-bottom:1px solid rgba(201,168,76,.08);font-size:.95rem;color:#8A8478;display:flex;align-items:center;gap:.9rem;transition:color .25s}
+.pricing-feats li:hover{color:#F5F0E8}
+.pricing-feats li::before{content:'';width:5px;height:5px;background:#C9A84C;border-radius:50%;flex-shrink:0}
+.pricing-note{font-size:.8rem;color:#8A8478;font-style:italic;margin-top:1.5rem}
+.contact-section{padding:5rem 4rem}
+.contact-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;text-align:center;margin-bottom:1rem}
+.contact-section h2 em{font-style:italic;color:#C9A84C}
+.contact-intro{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;color:#8A8478;font-size:1rem;margin-bottom:3.5rem}
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:2rem}
+.contact-info-item{display:flex;align-items:flex-start;gap:1rem;padding:1.5rem;border:1px solid rgba(201,168,76,.1);background:rgba(201,168,76,.02);transition:border-color .3s}
+.contact-info-item:hover{border-color:rgba(201,168,76,.3)}
+.contact-info-icon{font-size:1.4rem;flex-shrink:0}
+.contact-info-label{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:.3rem}
+.contact-info-val{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:#F5F0E8}
+.contact-form{display:flex;flex-direction:column;gap:1.2rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.form-group{display:flex;flex-direction:column;gap:.5rem}
+.form-label{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:#8A8478}
+.form-input,.form-select,.form-textarea{background:rgba(255,255,255,.03);border:1px solid rgba(201,168,76,.15);color:#F5F0E8;font-family:'Tenor Sans',sans-serif;font-size:.88rem;padding:.9rem 1.1rem;transition:border-color .3s;outline:none;width:100%}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:#C9A84C}
+.form-select{cursor:pointer}
+.form-select option{background:#0D0D0D;color:#F5F0E8}
+.form-textarea{resize:vertical;min-height:120px}
+.form-submit{display:flex;align-items:center;justify-content:center;gap:.8rem;background:#C9A84C;color:#000;font-family:'Tenor Sans',sans-serif;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;padding:1rem 2rem;border:none;cursor:pointer;transition:all .3s;width:100%}
+.form-submit:hover{background:#E8C96A;transform:translateY(-2px)}
+.form-note{font-size:.72rem;color:#8A8478;text-align:center;font-style:italic}
+.ig-section{padding:5rem 4rem}
 .ig-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;text-align:center;margin-bottom:1rem}
 .ig-section h2 em{font-style:italic;color:#C9A84C}
 .ig-intro{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;color:#8A8478;font-size:1rem;margin-bottom:3.5rem}
@@ -152,51 +271,12 @@ section{position:relative;z-index:1}
 .ig-play{opacity:0;transform:scale(.65);transition:all .4s}
 .ig-card:hover .ig-play{opacity:1;transform:scale(1)}
 .ig-label{position:absolute;bottom:0;left:0;right:0;z-index:3;padding:1.8rem 1.4rem 1.5rem;background:linear-gradient(transparent,rgba(0,0,0,.92))}
-.ig-reel-tag{font-size:.57rem;letter-spacing:.28em;text-transform:uppercase;color:#C9A84C;display:flex;align-items:center;gap:.4rem;margin-bottom:.45rem}
-.ig-title{font-family:'Cormorant Garamond',serif;font-size:1rem;color:#F5F0E8;line-height:1.35}
+.ig-reel-tag{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:#C9A84C;display:flex;align-items:center;gap:.4rem;margin-bottom:.45rem}
+.ig-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:#F5F0E8;line-height:1.35}
 .ig-follow{display:flex;justify-content:center}
-.ig-follow a{display:inline-flex;align-items:center;gap:.8rem;border:1px solid rgba(201,168,76,.4);color:#C9A84C;font-family:'Tenor Sans',sans-serif;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;padding:.85rem 2rem;text-decoration:none;transition:all .3s}
+.ig-follow a{display:inline-flex;align-items:center;gap:.8rem;border:1px solid rgba(201,168,76,.4);color:#C9A84C;font-family:'Tenor Sans',sans-serif;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;padding:.9rem 2.2rem;text-decoration:none;transition:all .3s}
 .ig-follow a:hover{background:rgba(201,168,76,.055);border-color:#C9A84C;transform:translateY(-2px)}
 .ig-follow a svg{width:17px;height:17px}
-.niches-section{padding:6rem 2rem;max-width:1200px;margin:0 auto}
-.niches-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;text-align:center;margin-bottom:4rem}
-.niches-section h2 em{font-style:italic;color:#C9A84C}
-.niches-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;background:rgba(201,168,76,.07)}
-.niche-card{background:#0D0D0D;padding:3rem 2.2rem;transition:all .4s;position:relative;overflow:hidden}
-.niche-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,#C9A84C,transparent);transform:scaleX(0);transition:transform .5s;transform-origin:center}
-.niche-card:hover{background:#0d0d0d}
-.niche-card:hover::before{transform:scaleX(1)}
-.niche-icon{font-size:2rem;margin-bottom:1.8rem;display:block;transition:transform .3s}
-.niche-card:hover .niche-icon{transform:scale(1.2) rotate(-5deg)}
-.niche-name{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:#F5F0E8;display:block;margin-bottom:.5rem}
-.niche-price{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:.9rem}
-.niche-desc{font-size:.8rem;color:#8A8478;line-height:1.75}
-.process-section{padding:6rem 2rem;max-width:1100px;margin:0 auto}
-.process-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;text-align:center;margin-bottom:5.5rem}
-.process-section h2 em{font-style:italic;color:#C9A84C}
-.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
-.proc-line{position:absolute;top:30px;left:12.5%;right:12.5%;height:1px;z-index:0;overflow:hidden}
-.proc-line-inner{width:100%;height:100%;background:linear-gradient(to right,#7A6328,#C9A84C,#7A6328);position:relative}
-.proc-line-inner::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(to right,transparent,rgba(255,255,255,.5),transparent);animation:scanLine 2.5s infinite linear}
-.proc-step{text-align:center;padding:0 1.2rem;position:relative;z-index:1}
-.proc-num{width:60px;height:60px;border-radius:50%;background:#000;border:1px solid #C9A84C;display:flex;align-items:center;justify-content:center;margin:0 auto 2rem;font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:300;color:#C9A84C;transition:all .4s}
-.proc-step:hover .proc-num{background:#C9A84C;color:#000;box-shadow:0 0 30px rgba(201,168,76,.45)}
-.proc-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:#F5F0E8;margin-bottom:.7rem}
-.proc-desc{font-size:.77rem;color:#8A8478;line-height:1.8}
-.pricing-section{padding:6rem 2rem;max-width:950px;margin:0 auto;text-align:center}
-.pricing-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;margin-bottom:4rem}
-.pricing-section h2 em{font-style:italic;color:#C9A84C}
-.pricing-card{border:1px solid rgba(201,168,76,.35);padding:4.5rem 4rem;max-width:620px;margin:0 auto;position:relative;background:linear-gradient(145deg,rgba(201,168,76,.04) 0%,transparent 60%)}
-.pricing-card::before{content:'RECOMENDADO';position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:#C9A84C;color:#000;font-size:.57rem;letter-spacing:.28em;padding:.35rem 1.2rem;font-family:'Tenor Sans',sans-serif;white-space:nowrap}
-.pricing-ttl{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#F5F0E8;margin-bottom:.3rem}
-.pricing-price{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:300;color:#C9A84C;display:block;margin:1.8rem 0 .5rem;line-height:1}
-.pricing-price small{font-size:.9rem;color:#8A8478;font-style:italic}
-.pricing-desc{font-size:.87rem;color:#8A8478;line-height:1.9;margin-bottom:2.5rem}
-.pricing-feats{list-style:none;text-align:left;margin-bottom:3rem}
-.pricing-feats li{padding:.7rem 0;border-bottom:1px solid rgba(201,168,76,.08);font-size:.83rem;color:#8A8478;display:flex;align-items:center;gap:.9rem;transition:color .25s}
-.pricing-feats li:hover{color:#F5F0E8}
-.pricing-feats li::before{content:'';width:5px;height:5px;background:#C9A84C;border-radius:50%;flex-shrink:0}
-.pricing-note{font-size:.7rem;color:#8A8478;font-style:italic;margin-top:1.5rem}
 .cta-section{padding:9rem 2rem;text-align:center;position:relative;overflow:hidden}
 .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 65% 55% at 50% 50%,rgba(201,168,76,.055) 0%,transparent 70%)}
 .cta-section::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(201,168,76,.2),transparent)}
@@ -206,13 +286,13 @@ section{position:relative;z-index:1}
 .btn-big{display:inline-flex;align-items:center;gap:1rem;background:#C9A84C;color:#000;font-family:'Tenor Sans',sans-serif;font-size:.88rem;letter-spacing:.18em;text-transform:uppercase;padding:1.3rem 3.2rem;text-decoration:none;transition:all .35s;position:relative;z-index:1}
 .btn-big:hover{background:#E8C96A;box-shadow:0 0 80px rgba(201,168,76,.45);transform:translateY(-3px)}
 .btn-big svg{width:22px;height:22px}
-footer{border-top:1px solid rgba(201,168,76,.1);padding:3.5rem 2.5rem;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:2rem}
+footer{border-top:1px solid rgba(201,168,76,.1);padding:3.5rem 4rem;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:2rem}
 .footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;letter-spacing:.2em;color:#C9A84C}
 .footer-logo span{color:#F5F0E8;font-weight:300}
 .footer-links{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap}
-.footer-links a{font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;color:#8A8478;text-decoration:none;transition:color .25s}
+.footer-links a{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:#8A8478;text-decoration:none;transition:color .25s}
 .footer-links a:hover{color:#C9A84C}
-.footer-copy{font-size:.63rem;color:#8A8478;text-align:right}
+.footer-copy{font-size:.75rem;color:#8A8478;text-align:right}
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
 @keyframes scrollPulse{0%,100%{opacity:1}50%{opacity:.25}}
 @keyframes scanLine{0%{left:-100%}100%{left:200%}}
@@ -223,37 +303,19 @@ footer{border-top:1px solid rgba(201,168,76,.1);padding:3.5rem 2.5rem;max-width:
 .r-right{opacity:0;transform:translateX(42px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
 .r-right.visible{opacity:1;transform:translateX(0)}
 .d1{transition-delay:.1s!important}.d2{transition-delay:.2s!important}.d3{transition-delay:.3s!important}.d4{transition-delay:.4s!important}.d5{transition-delay:.5s!important}.d6{transition-delay:.6s!important}
-@media(max-width:1024px){
-.about-section{grid-template-columns:1fr;gap:3.5rem}
-.about-visual{max-width:380px;margin:0 auto}
-.dv-inner{grid-template-columns:1fr;gap:3rem;padding:3rem 2rem}
-.dv-right{order:-1}
-footer{grid-template-columns:1fr;text-align:center;gap:1.5rem}
-.footer-copy,.footer-links{text-align:center}
-}
-@media(max-width:768px){
-nav{padding:1rem 1.3rem}
-.nav-links{display:none}
-.results-grid{grid-template-columns:1fr}
-.niches-grid{grid-template-columns:1fr 1fr}
-.proc-grid{grid-template-columns:1fr 1fr;gap:3.5rem}
-.proc-line{display:none}
-.pf-grid{grid-template-columns:1fr}
-.ig-grid{grid-template-columns:1fr 1fr}
-.ig-card{aspect-ratio:4/5}
-}
-@media(max-width:560px){
-.niches-grid{grid-template-columns:1fr}
-.hero-ctas{flex-direction:column;align-items:center}
-.btn-primary,.btn-secondary{width:100%;justify-content:center;max-width:340px}
-.pricing-card{padding:3.5rem 1.8rem}
-.ig-grid{grid-template-columns:1fr}
-.proc-grid{grid-template-columns:1fr}
-}
+@media(min-width:1025px){.about-section{grid-template-columns:1fr 1fr}.dv-inner{grid-template-columns:1fr 1.1fr}.results-grid{grid-template-columns:repeat(3,1fr)}.pf-grid{grid-template-columns:1fr 1fr}.ig-grid{grid-template-columns:repeat(3,1fr)}.niches-grid{grid-template-columns:repeat(3,1fr)}.proc-grid{grid-template-columns:repeat(4,1fr)}.gear-grid{grid-template-columns:repeat(4,1fr)}.zones-grid{grid-template-columns:repeat(4,1fr)}footer{grid-template-columns:auto 1fr auto}.hero-ctas{flex-direction:row}.nav-links{display:flex}}
+@media(max-width:1024px){.about-section{grid-template-columns:1fr;gap:3.5rem}.about-visual{max-width:380px;margin:0 auto}.dv-inner{grid-template-columns:1fr;gap:3rem;padding:3rem 2rem}.dv-right{order:-1}footer{grid-template-columns:1fr;text-align:center;gap:1.5rem}.footer-copy,.footer-links{text-align:center}}
+@media(max-width:768px){nav{padding:1rem 1.3rem}.nav-links{display:none}.results-grid{grid-template-columns:1fr}.niches-grid{grid-template-columns:1fr 1fr}.proc-grid{grid-template-columns:1fr 1fr;gap:3.5rem}.proc-line{display:none}.pf-grid{grid-template-columns:1fr}.ig-grid{grid-template-columns:1fr 1fr}.ig-card{aspect-ratio:4/5}.gear-grid{grid-template-columns:1fr 1fr}.zones-grid{grid-template-columns:1fr 1fr}.faq-grid{grid-template-columns:1fr}.contact-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.about-section,.davinci-section,.results-section,.portfolio-section,.ig-section,.niches-section,.process-section,.pricing-section,.gear-section,.zones-section,.faq-section,.contact-section{padding-left:1.2rem;padding-right:1.2rem}.divider{padding:0 1.2rem}footer{padding:2.5rem 1.2rem}.cursor,.cursor-ring{display:none}}
+@media(max-width:560px){.niches-grid{grid-template-columns:1fr}.hero-ctas{flex-direction:column;align-items:center}.btn-primary,.btn-secondary{width:100%;justify-content:center;max-width:340px}.pricing-card{padding:3.5rem 1.8rem}.ig-grid{grid-template-columns:1fr}.proc-grid{grid-template-columns:1fr}.gear-grid{grid-template-columns:1fr 1fr}.zones-grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
+<div id="loader"><div class="loader-logo">Torcua<span>FPV</span></div><div class="loader-bar"></div></div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<a href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20me%20interesa%20hablar%20sobre%20un%20proyecto." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
 <canvas id="particles"></canvas>
+
 <nav id="navbar">
 <a href="#" class="nav-logo">Torcua<span>FPV</span></a>
 <div class="nav-right">
@@ -261,7 +323,11 @@ nav{padding:1rem 1.3rem}
 <li><a href="#quiensoy">Quién soy</a></li>
 <li><a href="#portfolio">Portfolio</a></li>
 <li><a href="#paraquien">Servicios</a></li>
+<li><a href="#zonas">Zonas</a></li>
+<li><a href="#equipo">Equipo</a></li>
+<li><a href="#faq">FAQ</a></li>
 <li><a href="#tarifas">Tarifas</a></li>
+<li><a href="#contacto">Contacto</a></li>
 </ul>
 <a href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20he%20visto%20tu%20portfolio%20y%20me%20interesa%20hablar%20sobre%20un%20proyecto." class="nav-cta" target="_blank" rel="noopener">
 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -280,34 +346,25 @@ Hablemos
 <p class="hero-sub">Vídeo aéreo FPV que captura miradas, emociones y clientes en los primeros segundos.</p>
 <div class="hero-promise">Primera colaboración con precio exclusivo</div>
 <div class="hero-ctas">
-<a href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20quiero%20hablar%20sobre%20un%20presupuesto%20para%20mi%20proyecto." class="btn-primary" target="_blank" rel="noopener">
-<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-Pide tu presupuesto
-</a>
+<a href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20quiero%20hablar%20sobre%20un%20presupuesto%20para%20mi%20proyecto." class="btn-primary" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Pide tu presupuesto</a>
 <a href="#portfolio" class="btn-secondary">Ver trabajos</a>
 </div>
 </div>
 <div class="scroll-hint"><span>Descubre</span><div class="scroll-line"></div></div>
 </section>
 
-<div class="divider"><div class="divider-line"></div></div>
+<div class="ticker-wrap"><div class="ticker-track">
+<div class="ticker-item"><span class="ticker-dot"></span><strong>Turismo</strong></div><div class="ticker-item"><span class="ticker-dot"></span><strong>Inmobiliarias</strong></div><div class="ticker-item"><span class="ticker-dot"></span><strong>Eventos & Bodas</strong></div><div class="ticker-item"><span class="ticker-dot"></span><strong>Marcas & Corporativo</strong></div><div class="ticker-item"><span class="ticker-dot"></span><strong>Cultura & Patrimonio</strong></div><div class="ticker-item"><span class="ticker-dot"></span><strong>Naturaleza & Sport</strong></div><div class="ticker-item"><span class="ticker-dot"></span><strong>Entrega en 2–3 días</strong></div><div class="ticker-item"><span class="ticker-dot"></span><strong>Interior & Exterior</strong></div><div class="ticker-item"><span class="ticker-dot"></span><strong>Certificado AESA</strong></div>
+<div class="ticker-item"><span class="ticker-dot"></span><strong>Turismo</strong></div><div class="ticker-item"><span class="ticker-dot"></span><strong>Inmobiliarias</strong></div><div class="ticker-item"><span class="ticker-dot"></span><strong>Eventos & Bodas</strong></div><div class="ticker-item"><span class="ticker-dot"></span><strong>Marcas & Corporativo</strong></div><div class="ticker-item"><span class="ticker-dot"></span><strong>Cultura & Patrimonio</strong></div><div class="ticker-item"><span class="ticker-dot"></span><strong>Naturaleza & Sport</strong></div><div class="ticker-item"><span class="ticker-dot"></span><strong>Entrega en 2–3 días</strong></div><div class="ticker-item"><span class="ticker-dot"></span><strong>Interior & Exterior</strong></div><div class="ticker-item"><span class="ticker-dot"></span><strong>Certificado AESA</strong></div>
+</div></div>
 
-<section class="vsl-section reveal" id="showreel">
-<span class="section-label">Showreel</span>
-<h2>Deja que <em>el vuelo hable</em></h2>
-<div class="vimeo-wrap">
-<div class="vsl-ph"><p>Añade aquí tu vídeo showreel principal</p><small>Sustituye por tu iframe de Vimeo cuando lo tengas</small></div>
-</div>
-</section>
+<div class="divider"><div class="divider-line"><div class="divider-diamond"></div></div></div>
 
-<div class="divider"><div class="divider-line"></div></div>
-
+<!-- QUIÉN SOY -->
 <section class="about-section" id="quiensoy">
-<div class="about-visual r-left">
+<div class="about-visual r-left" id="aboutVisual">
 <div class="about-frame">
-<div class="about-frame-inner">
-<svg viewBox="0 0 200 130" fill="none"><ellipse cx="48" cy="32" rx="30" ry="11" stroke="#C9A84C" stroke-width="1.2"/><ellipse cx="152" cy="32" rx="30" ry="11" stroke="#C9A84C" stroke-width="1.2"/><ellipse cx="48" cy="98" rx="30" ry="11" stroke="#C9A84C" stroke-width="1.2"/><ellipse cx="152" cy="98" rx="30" ry="11" stroke="#C9A84C" stroke-width="1.2"/><line x1="72" y1="38" x2="100" y2="58" stroke="#C9A84C" stroke-width="1.2"/><line x1="128" y1="38" x2="100" y2="58" stroke="#C9A84C" stroke-width="1.2"/><line x1="72" y1="92" x2="100" y2="72" stroke="#C9A84C" stroke-width="1.2"/><line x1="128" y1="92" x2="100" y2="72" stroke="#C9A84C" stroke-width="1.2"/><rect x="87" y="56" width="26" height="18" rx="3" stroke="#C9A84C" stroke-width="1.2"/><circle cx="100" cy="65" r="5" fill="#C9A84C" opacity=".35"/><circle cx="100" cy="65" r="2" fill="#C9A84C" opacity=".7"/></svg>
-</div>
+<img src="https://raw.githubusercontent.com/torcua27-maker/Torcuafpv/main/torcua.JPG" alt="Torcua — Piloto FPV" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(.9) contrast(1.05)">
 <div class="about-frame-glow"></div>
 </div>
 <div class="about-badge"><span class="about-badge-num">3</span><span class="about-badge-txt">años en vuelo</span></div>
@@ -319,15 +376,17 @@ Pide tu presupuesto
 <p>Tres años perfeccionando cada curva, cada transición, cada atardecer desde el aire. No hago vídeos bonitos — hago vídeos que enganchan desde el primer segundo.</p>
 <p>Si tu marca, destino o evento merece ser visto desde otro ángulo, hablamos.</p>
 <div class="about-stats">
-<div><span class="about-stat-num">FPV</span><span class="about-stat-lbl">Freestyle & Cine</span></div>
-<div><span class="about-stat-num">3"</span><span class="about-stat-lbl">Te enganchan</span></div>
-<div><span class="about-stat-num">1ª</span><span class="about-stat-lbl">Precio especial</span></div>
+<div><span class="about-stat-num" data-target="500" id="counter1">0</span><span class="about-stat-lbl">Horas de vuelo</span></div>
+<div><span class="about-stat-num" data-target="3" id="counter2">0</span><span class="about-stat-lbl">Años de experiencia</span></div>
+<div><span class="about-stat-num">2–3<span style="font-size:1.5rem">d</span></span><span class="about-stat-lbl">Entrega del vídeo</span></div>
 </div>
+<div class="aesa-badge"><span class="aesa-badge-icon">🏅</span><div class="aesa-badge-text"><span class="aesa-badge-title">Certificado A1/A3 · AESA</span><span class="aesa-badge-sub">Piloto certificado · Vuelo legal en España</span></div></div>
 </div>
 </section>
 
-<div class="divider"><div class="divider-line"></div></div>
+<div class="divider"><div class="divider-line"><div class="divider-diamond"></div></div></div>
 
+<!-- DAVINCI -->
 <section class="davinci-section reveal" id="postproduccion">
 <div class="dv-inner">
 <div class="dv-left">
@@ -344,7 +403,7 @@ Pide tu presupuesto
 </div>
 <div class="dv-right">
 <div class="dv-logo-wrap">
-<div class="dv-circle"><span class="dv-letters">DR</span></div>
+<img src="https://raw.githubusercontent.com/torcua27-maker/Torcuafpv/main/davinci.jpg" alt="DaVinci Resolve Studio" style="width:100%;display:block;border:1px solid rgba(201,168,76,.15);filter:brightness(.95)">
 <span class="dv-lbl">DaVinci Resolve Studio</span>
 <span class="dv-sub">Professional Grade Editing</span>
 </div>
@@ -352,8 +411,9 @@ Pide tu presupuesto
 </div>
 </section>
 
-<div class="divider"><div class="divider-line"></div></div>
+<div class="divider"><div class="divider-line"><div class="divider-diamond"></div></div></div>
 
+<!-- RESULTADOS — card 3 cambiada a Seguro RC -->
 <section class="results-section" id="resultados">
 <div class="reveal">
 <span class="section-label" style="text-align:center">Lo que consigues</span>
@@ -362,12 +422,13 @@ Pide tu presupuesto
 <div class="results-grid">
 <div class="result-card reveal d1"><span class="result-icon">🎯</span><span class="result-metric">+∞</span><span class="result-title">Alcance Visual</span><p class="result-desc">Llegas a quien antes no te veía. El dron pone tu proyecto en el mapa de una manera que ninguna cámara en tierra puede igualar.</p></div>
 <div class="result-card reveal d2"><span class="result-icon">⚡</span><span class="result-metric">3"</span><span class="result-title">Tiempo de Enganche</span><p class="result-desc">Tres segundos. Es lo que tarda un vídeo FPV bien hecho en atrapar al espectador y mantenerlo pegado a la pantalla.</p></div>
-<div class="result-card reveal d3"><span class="result-icon">🏆</span><span class="result-metric">100%</span><span class="result-title">Exclusividad</span><p class="result-desc">Cada vuelo es irrepetible. Tu vídeo es único — nadie más tendrá ese plano, esa luz, ese momento capturado para ti.</p></div>
+<div class="result-card reveal d3"><span class="result-icon">🛡️</span><span class="result-metric">RC</span><span class="result-title">Seguro & Certificado</span><p class="result-desc">Seguro de responsabilidad civil, certificado A1/A3 de AESA y gestión de permisos incluida. Vuelas tranquilo — yo me encargo de todo.</p></div>
 </div>
 </section>
 
-<div class="divider"><div class="divider-line"></div></div>
+<div class="divider"><div class="divider-line"><div class="divider-diamond"></div></div></div>
 
+<!-- PORTFOLIO -->
 <section class="portfolio-section reveal" id="portfolio">
 <span class="section-label" style="text-align:center;display:block">Portfolio</span>
 <h2>Vuelos que<br><em>cuentan historias</em></h2>
@@ -391,39 +452,9 @@ Pide tu presupuesto
 </div>
 </section>
 
-<div class="divider"><div class="divider-line"></div></div>
+<div class="divider"><div class="divider-line"><div class="divider-diamond"></div></div></div>
 
-<section class="ig-section reveal" id="instagram">
-<span class="section-label" style="text-align:center;display:block">Instagram</span>
-<h2>En vuelo<br><em>también en redes</em></h2>
-<p class="ig-intro">Los últimos reels de <strong style="color:#C9A84C;font-weight:400">@torcuafpv</strong> — sígueme para ver más.</p>
-<div class="ig-grid">
-<a href="https://www.instagram.com/torcuafpv" target="_blank" rel="noopener" class="ig-card">
-<div class="ig-card-bg" style="background:linear-gradient(150deg,#1a0e00,#2d1a05,#080401)"></div>
-<div class="ig-overlay"><div class="ig-play"><svg width="52" height="52" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="25" stroke="#C9A84C" stroke-width="1.5"/><path d="M21 17L37 26L21 35V17Z" fill="#C9A84C"/></svg></div></div>
-<div class="ig-label"><div class="ig-reel-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Reel · @torcuafpv</div><div class="ig-title">Casco Antiguo de Badajoz al atardecer</div></div>
-</a>
-<a href="https://www.instagram.com/torcuafpv" target="_blank" rel="noopener" class="ig-card">
-<div class="ig-card-bg" style="background:linear-gradient(150deg,#001a0e,#002d18,#000a04)"></div>
-<div class="ig-overlay"><div class="ig-play"><svg width="52" height="52" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="25" stroke="#C9A84C" stroke-width="1.5"/><path d="M21 17L37 26L21 35V17Z" fill="#C9A84C"/></svg></div></div>
-<div class="ig-label"><div class="ig-reel-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Reel · @torcuafpv</div><div class="ig-title">Garganta de los Infiernos — Jerte</div></div>
-</a>
-<a href="https://www.instagram.com/torcuafpv" target="_blank" rel="noopener" class="ig-card">
-<div class="ig-card-bg" style="background:linear-gradient(150deg,#1a0006,#2d000e,#0a0003)"></div>
-<div class="ig-overlay"><div class="ig-play"><svg width="52" height="52" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="25" stroke="#C9A84C" stroke-width="1.5"/><path d="M21 17L37 26L21 35V17Z" fill="#C9A84C"/></svg></div></div>
-<div class="ig-label"><div class="ig-reel-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Reel · @torcuafpv</div><div class="ig-title">Carnaval — Agrupación El Vaivén</div></div>
-</a>
-</div>
-<div class="ig-follow">
-<a href="https://www.instagram.com/torcuafpv" target="_blank" rel="noopener">
-<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-Seguir en Instagram · @torcuafpv
-</a>
-</div>
-</section>
-
-<div class="divider"><div class="divider-line"></div></div>
-
+<!-- SERVICIOS -->
 <section class="niches-section" id="paraquien">
 <div class="reveal">
 <span class="section-label" style="text-align:center;display:block">¿Para quién trabajo?</span>
@@ -439,8 +470,25 @@ Seguir en Instagram · @torcuafpv
 </div>
 </section>
 
-<div class="divider"><div class="divider-line"></div></div>
+<div class="divider"><div class="divider-line"><div class="divider-diamond"></div></div></div>
 
+<!-- ZONAS — ahora antes del proceso -->
+<section class="zones-section reveal" id="zonas">
+<span class="section-label" style="text-align:center;display:block">Dónde vuelo</span>
+<h2>Extremadura<br><em>y más allá</em></h2>
+<p class="zones-intro">Base en Badajoz. Disponible en toda Extremadura y desplazamiento a cualquier punto de España.</p>
+<div class="zones-grid">
+<div class="zone-card reveal d1"><span class="zone-icon">🏛️</span><span class="zone-name">Badajoz</span><p class="zone-desc">Base de operaciones. Ciudad, casco histórico, entorno rural y toda la provincia.</p></div>
+<div class="zone-card reveal d2"><span class="zone-icon">🌿</span><span class="zone-name">Extremadura</span><p class="zone-desc">Naturaleza, patrimonio, pueblos y paisajes de toda la comunidad autónoma.</p></div>
+<div class="zone-card reveal d3"><span class="zone-icon">🇪🇸</span><span class="zone-name">España</span><p class="zone-desc">Me desplazo a cualquier punto de la península con coste adicional de viaje.</p></div>
+<div class="zone-card reveal d4"><span class="zone-icon">✈️</span><span class="zone-name">Internacional</span><p class="zone-desc">¿Tienes un proyecto fuera de España? Hablamos y buscamos la fórmula.</p></div>
+</div>
+<p class="zones-note">¿Tu proyecto está fuera de Extremadura? <strong>Me desplazo con coste adicional.</strong> Cuéntame dónde y lo valoramos.</p>
+</section>
+
+<div class="divider"><div class="divider-line"><div class="divider-diamond"></div></div></div>
+
+<!-- PROCESO -->
 <section class="process-section" id="proceso">
 <div class="reveal">
 <span class="section-label" style="text-align:center;display:block">Cómo trabajamos</span>
@@ -455,8 +503,45 @@ Seguir en Instagram · @torcuafpv
 </div>
 </section>
 
-<div class="divider"><div class="divider-line"></div></div>
+<div class="divider"><div class="divider-line"><div class="divider-diamond"></div></div></div>
 
+<!-- EQUIPO — reducido a 4 items principales -->
+<section class="gear-section reveal" id="equipo">
+<span class="section-label" style="text-align:center;display:block">El Arsenal</span>
+<h2>Equipo que<br><em>no deja nada al azar</em></h2>
+<p class="gear-intro">Cada vuelo respaldado por tecnología de primer nivel.</p>
+<div class="gear-grid">
+<div class="gear-card reveal d1"><span class="gear-icon">🚁</span><span class="gear-name">Apex Evo DC 5"</span><span class="gear-type">FPV · Freestyle & Cine</span><p class="gear-desc">Dron FPV de 5 pulgadas construido para vuelos cinematográficos suaves y maniobras que ningún otro dron puede ejecutar.</p></div>
+<div class="gear-card reveal d2"><span class="gear-icon">🎬</span><span class="gear-name">DJI Avata 2</span><span class="gear-type">FPV · Interior & Proximidad</span><p class="gear-desc">FPV compacto ideal para espacios reducidos, interiores y tomas de proximidad con máxima estabilidad y seguridad.</p></div>
+<div class="gear-card reveal d3"><span class="gear-icon">✈️</span><span class="gear-name">DJI Mini 5 Pro</span><span class="gear-type">Estabilizado · Cinematográfico</span><p class="gear-desc">Dron estabilizado ultraligero para tomas aéreas suaves, panorámicas y planos de establecimiento de alta calidad.</p></div>
+<div class="gear-card reveal d4"><span class="gear-icon">📷</span><span class="gear-name">DJI Action 6</span><span class="gear-type">Cámara · 4K HDR</span><p class="gear-desc">Cámara de acción profesional con grabación 4K HDR, estabilización superior y amplio rango dinámico para cualquier condición.</p></div>
+</div>
+</section>
+
+<div class="divider"><div class="divider-line"><div class="divider-diamond"></div></div></div>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+<div class="reveal">
+<span class="section-label" style="text-align:center;display:block">Preguntas frecuentes</span>
+<h2>Todo lo que<br><em>necesitas saber</em></h2>
+<p class="faq-intro">Resuelvo tus dudas antes de que tengas que preguntar.</p>
+</div>
+<div class="faq-grid">
+<div class="faq-item reveal d1" onclick="this.classList.toggle('open')"><div class="faq-question">¿Cuánto tarda en estar listo el vídeo?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Normalmente entre 2 y 3 días desde el rodaje. Dependiendo de la complejidad del proyecto o del volumen de material, puede variar, pero siempre te doy una fecha estimada antes de empezar.</p></div></div>
+<div class="faq-item reveal d2" onclick="this.classList.toggle('open')"><div class="faq-question">¿Vuelas en interiores también?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Sí, tanto en interiores como en exteriores. Para interiores utilizo drones específicos más compactos y seguros, adaptados al espacio y a la presencia de personas.</p></div></div>
+<div class="faq-item reveal d3" onclick="this.classList.toggle('open')"><div class="faq-question">¿En qué zonas trabajas?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Principalmente en Extremadura. También me desplazo fuera a cualquier punto de España, con un coste adicional de desplazamiento que valoramos según el proyecto.</p></div></div>
+<div class="faq-item reveal d4" onclick="this.classList.toggle('open')"><div class="faq-question">¿Necesitas permisos para volar?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Depende del proyecto. En muchos casos solo es necesaria una comunicación al Ministerio del Interior, que gestiono yo directamente. Para proyectos más complejos trabajo con Panorámica, empresa especializada en permisos de vuelo.</p></div></div>
+<div class="faq-item reveal d1" onclick="this.classList.toggle('open')"><div class="faq-question">¿Qué pasa si el día del rodaje llueve?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Lo aplazamos a una fecha que venga bien para los dos. La seguridad y la calidad del resultado siempre van primero. Si el cliente necesita continuar por motivos de producción, lo valoramos juntos.</p></div></div>
+<div class="faq-item reveal d2" onclick="this.classList.toggle('open')"><div class="faq-question">¿En qué formato entrego los vídeos?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Me adapto a lo que necesites. Si el vídeo va a redes sociales, exporto en el formato óptimo para cada plataforma. Si va a web, pantalla o presentación, ajusto en consecuencia. Para eso está DaVinci Resolve Studio.</p></div></div>
+<div class="faq-item reveal d3" onclick="this.classList.toggle('open')"><div class="faq-question">¿Tienes que prepararme algo yo antes del rodaje?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>No necesariamente. Me encargo de todo: localización, planificación del vuelo, guion visual y logística. Si tienes alguna idea en mente, me encanta escucharla. Lo importante es que el resultado sea exactamente lo que necesitas.</p></div></div>
+<div class="faq-item reveal d4" onclick="this.classList.toggle('open')"><div class="faq-question">¿Por qué elegirte a ti y no a una empresa grande?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Las empresas grandes son frías y se ciñen a un contrato. Yo doy un trato cercano y totalmente personalizado. Estoy atento a cada detalle, soy resolutivo — si surge un problema encuentro la solución — y no paro hasta conseguir el mejor resultado posible.</p></div></div>
+</div>
+</section>
+
+<div class="divider"><div class="divider-line"><div class="divider-diamond"></div></div></div>
+
+<!-- TARIFAS -->
 <section class="pricing-section reveal" id="tarifas">
 <span class="section-label">Tarifas</span>
 <h2>Cada proyecto,<br><em>su precio justo</em></h2>
@@ -472,22 +557,70 @@ Seguir en Instagram · @torcuafpv
 <li>Edición profesional en DaVinci Resolve Studio incluida</li>
 <li>Entrega en los formatos que necesites</li>
 </ul>
-<a href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20me%20interesa%20un%20presupuesto%20personalizado.%20¿Hablamos?" class="btn-primary" target="_blank" rel="noopener" style="width:100%;justify-content:center;">
-<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-Pide tu presupuesto
-</a>
+<a href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20me%20interesa%20un%20presupuesto%20personalizado.%20¿Hablamos?" class="btn-primary" target="_blank" rel="noopener" style="width:100%;justify-content:center;"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Pide tu presupuesto</a>
 <p class="pricing-note">Sin compromisos. Respondo en menos de 24 horas.</p>
 </div>
 </section>
+
+<div class="divider"><div class="divider-line"><div class="divider-diamond"></div></div></div>
+
+<!-- CONTACTO -->
+<section class="contact-section reveal" id="contacto">
+<span class="section-label" style="text-align:center;display:block">Contacto</span>
+<h2>Cuéntame<br><em>tu proyecto</em></h2>
+<p class="contact-intro">Sin compromisos. Te respondo en menos de 24 horas.</p>
+<div class="contact-wrap">
+<div class="contact-info">
+<div class="contact-info-item"><span class="contact-info-icon">📱</span><div><span class="contact-info-label">WhatsApp</span><span class="contact-info-val">+34 633 210 907</span></div></div>
+<div class="contact-info-item"><span class="contact-info-icon">✉️</span><div><span class="contact-info-label">Email</span><span class="contact-info-val">torcuafpv@gmail.com</span></div></div>
+<div class="contact-info-item"><span class="contact-info-icon">📍</span><div><span class="contact-info-label">Base de operaciones</span><span class="contact-info-val">Badajoz, Extremadura</span></div></div>
+<div class="contact-info-item"><span class="contact-info-icon">⏱️</span><div><span class="contact-info-label">Tiempo de respuesta</span><span class="contact-info-val">Menos de 24 horas</span></div></div>
+</div>
+<div>
+<form class="contact-form" onsubmit="handleForm(event)">
+<div class="form-row">
+<div class="form-group"><label class="form-label">Tu nombre</label><input class="form-input" type="text" placeholder="Nombre o empresa" required></div>
+<div class="form-group"><label class="form-label">Teléfono o email</label><input class="form-input" type="text" placeholder="+34 600 000 000" required></div>
+</div>
+<div class="form-group"><label class="form-label">Tipo de proyecto</label><select class="form-select form-input"><option value="">Selecciona una opción</option><option>Turismo o destino</option><option>Inmobiliaria o finca</option><option>Evento o boda</option><option>Marca o corporativo</option><option>Cultura o festividad</option><option>Naturaleza o deporte</option><option>Otro</option></select></div>
+<div class="form-group"><label class="form-label">Fecha aproximada</label><input class="form-input" type="text" placeholder="Ej: junio 2025 o sin fecha aún"></div>
+<div class="form-group"><label class="form-label">Cuéntame tu proyecto</label><textarea class="form-textarea form-input" placeholder="Qué necesitas, dónde, cualquier detalle..."></textarea></div>
+<button type="submit" class="form-submit"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Enviar por WhatsApp</button>
+<p class="form-note">Al enviar, abrirás WhatsApp con tu mensaje ya redactado.</p>
+</form>
+</div>
+</div>
+</section>
+
+<div class="divider"><div class="divider-line"><div class="divider-diamond"></div></div></div>
+
+<!-- INSTAGRAM — movido al final antes del CTA -->
+<section class="ig-section reveal" id="instagram">
+<span class="section-label" style="text-align:center;display:block">Instagram</span>
+<h2>En vuelo<br><em>también en redes</em></h2>
+<p class="ig-intro">Los últimos reels de <strong style="color:#C9A84C;font-weight:400">@torcuafpv</strong> — sígueme para ver más.</p>
+<div class="ig-grid">
+<a href="https://www.instagram.com/torcuafpv" target="_blank" rel="noopener" class="ig-card"><div class="ig-card-bg" style="background:linear-gradient(150deg,#1a0e00,#2d1a05,#080401)"></div><div class="ig-overlay"><div class="ig-play"><svg width="52" height="52" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="25" stroke="#C9A84C" stroke-width="1.5"/><path d="M21 17L37 26L21 35V17Z" fill="#C9A84C"/></svg></div></div><div class="ig-label"><div class="ig-reel-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Reel · @torcuafpv</div><div class="ig-title">Casco Antiguo de Badajoz al atardecer</div></div></a>
+<a href="https://www.instagram.com/torcuafpv" target="_blank" rel="noopener" class="ig-card"><div class="ig-card-bg" style="background:linear-gradient(150deg,#001a0e,#002d18,#000a04)"></div><div class="ig-overlay"><div class="ig-play"><svg width="52" height="52" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="25" stroke="#C9A84C" stroke-width="1.5"/><path d="M21 17L37 26L21 35V17Z" fill="#C9A84C"/></svg></div></div><div class="ig-label"><div class="ig-reel-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Reel · @torcuafpv</div><div class="ig-title">Garganta de los Infiernos — Jerte</div></div></a>
+<a href="https://www.instagram.com/torcuafpv" target="_blank" rel="noopener" class="ig-card"><div class="ig-card-bg" style="background:linear-gradient(150deg,#1a0006,#2d000e,#0a0003)"></div><div class="ig-overlay"><div class="ig-play"><svg width="52" height="52" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="25" stroke="#C9A84C" stroke-width="1.5"/><path d="M21 17L37 26L21 35V17Z" fill="#C9A84C"/></svg></div></div><div class="ig-label"><div class="ig-reel-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Reel · @torcuafpv</div><div class="ig-title">Carnaval — Agrupación El Vaivén</div></div></a>
+</div>
+<div class="ig-follow"><a href="https://www.instagram.com/torcuafpv" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>Seguir en Instagram · @torcuafpv</a></div>
+</section>
+
+<div class="divider"><div class="divider-line"><div class="divider-diamond"></div></div></div>
+
+
+<div class="divider"><div class="divider-line"><div class="divider-diamond"></div></div></div>
+
+
+
+<div class="divider"><div class="divider-line"><div class="divider-diamond"></div></div></div>
 
 <section class="cta-section reveal">
 <span class="section-label" style="display:block;text-align:center">¿Listo para despegar?</span>
 <h2>Dale a tu proyecto<br><em>la perspectiva que merece</em></h2>
 <p>Un mensaje es suficiente para empezar.</p>
-<a href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20quiero%20ampliar%20el%20alcance%20de%20mi%20proyecto%20con%20vídeo%20FPV.%20¿Podemos%20hablar?" class="btn-big" target="_blank" rel="noopener">
-<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-Escríbeme por WhatsApp
-</a>
+<a href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20quiero%20ampliar%20el%20alcance%20de%20mi%20proyecto%20con%20vídeo%20FPV.%20¿Podemos%20hablar?" class="btn-big" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Escríbeme por WhatsApp</a>
 </section>
 
 <footer>
@@ -500,7 +633,6 @@ Escríbeme por WhatsApp
 </div>
 <p class="footer-copy">© 2025 TorcuaFPV</p>
 </footer>
-
 <script>
 const canvas=document.getElementById('particles');
 const ctx=canvas.getContext('2d');
@@ -524,14 +656,74 @@ if(d<115){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[
 requestAnimationFrame(draw);
 }
 draw();
+
 const nav=document.getElementById('navbar');
 window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60),{passive:true});
+
+const aboutVisual=document.getElementById('aboutVisual');
+if(aboutVisual){
+window.addEventListener('scroll',()=>{
+const rect=aboutVisual.getBoundingClientRect();
+const winH=window.innerHeight;
+const progress=1-Math.max(0,Math.min(1,(rect.top-winH*0.1)/(winH*0.6)));
+aboutVisual.style.opacity=Math.max(0,Math.min(1,progress));
+},{passive:true});
+}
+
 const allReveal=document.querySelectorAll('.reveal,.r-left,.r-right');
 const io=new IntersectionObserver(entries=>{
 entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
 },{threshold:.07,rootMargin:'0px 0px -30px 0px'});
 allReveal.forEach(el=>io.observe(el));
-</script>
 
+function animateCounter(el,target,duration){
+let start=0;const step=target/((duration/1000)*60);
+const timer=setInterval(()=>{
+start+=step;if(start>=target){start=target;clearInterval(timer)}
+el.textContent=Math.floor(start)+(target>=100?'+':'');
+},1000/60);
+}
+const counterObserver=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting){
+const c1=document.getElementById('counter1');
+const c2=document.getElementById('counter2');
+if(c1)animateCounter(c1,500,2000);
+if(c2)animateCounter(c2,3,1500);
+counterObserver.disconnect();
+}
+});
+},{threshold:.3});
+const c1=document.getElementById('counter1');
+if(c1)counterObserver.observe(c1);
+
+function handleForm(e){
+e.preventDefault();
+const form=e.target;
+const nombre=form.querySelector('input[placeholder*="Nombre"]').value||'';
+const contacto=form.querySelector('input[placeholder*="34"]').value||'';
+const tipo=form.querySelector('select').value||'';
+const fecha=form.querySelector('input[placeholder*="junio"]').value||'';
+const mensaje=form.querySelector('textarea').value||'';
+const txt=`Hola Torcua, te escribo desde tu web.%0A%0A*Nombre:* ${encodeURIComponent(nombre)}%0A*Contacto:* ${encodeURIComponent(contacto)}%0A*Tipo de proyecto:* ${encodeURIComponent(tipo)}%0A*Fecha:* ${encodeURIComponent(fecha)}%0A%0A*Proyecto:* ${encodeURIComponent(mensaje)}`;
+window.open(`https://wa.me/34633210907?text=${txt}`,'_blank');
+}
+
+const loader=document.getElementById('loader');
+window.addEventListener('load',()=>{setTimeout(()=>{loader.classList.add('hidden')},1600)});
+
+const cursor=document.getElementById('cursor');
+const cursorRing=document.getElementById('cursorRing');
+if(cursor&&cursorRing){
+document.addEventListener('mousemove',e=>{
+cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px';
+cursorRing.style.left=e.clientX+'px';cursorRing.style.top=e.clientY+'px';
+});
+document.querySelectorAll('a,button').forEach(el=>{
+el.addEventListener('mouseenter',()=>{cursorRing.style.width='60px';cursorRing.style.height='60px';cursorRing.style.borderColor='rgba(201,168,76,.8)'});
+el.addEventListener('mouseleave',()=>{cursorRing.style.width='36px';cursorRing.style.height='36px';cursorRing.style.borderColor='rgba(201,168,76,.5)'});
+});
+}
+</script>
 </body>
 </html>
