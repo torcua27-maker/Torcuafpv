@@ -12,14 +12,14 @@
 <meta property="og:url" content="https://torcuafpv.netlify.app">
 <meta property="og:title" content="TorcuaFPV — Piloto FPV Cinematográfico | Badajoz">
 <meta property="og:description" content="Vídeo aéreo FPV que captura miradas, emociones y clientes en los primeros segundos. Badajoz, Extremadura.">
-<meta property="og:image" content="https://raw.githubusercontent.com/torcua27-maker/Torcuafpv/main/torcua.JPG">
+<meta property="og:image" content="https://torcuafpv.netlify.app/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="TorcuaFPV — Piloto FPV Cinematográfico | Badajoz">
 <meta name="twitter:description" content="Vídeo aéreo FPV que captura miradas, emociones y clientes en los primeros segundos.">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/torcua27-maker/Torcuafpv/main/torcua.JPG">
+<meta name="twitter:image" content="https://torcuafpv.netlify.app/og-image.jpg">
 <link rel="canonical" href="https://torcuafpv.netlify.app">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚁</text></svg>">
 <meta name="theme-color" content="#C9A84C">
@@ -447,6 +447,38 @@ footer{font-size:.95rem}
 @media(max-width:1024px){.about-section{grid-template-columns:1fr;gap:3.5rem}.about-visual{max-width:380px;margin:0 auto}.dv-inner{grid-template-columns:1fr;gap:3rem;padding:3rem 2rem}.dv-right{order:-1}footer{grid-template-columns:1fr;text-align:center;gap:1.5rem}.footer-copy,.footer-links{text-align:center}}
 @media(max-width:768px){nav{padding:1rem 1.3rem}.nav-links{display:none}.results-grid{grid-template-columns:1fr}.niches-grid{grid-template-columns:1fr 1fr}.proc-grid{grid-template-columns:1fr 1fr;gap:3.5rem}.proc-line{display:none}.pf-grid{grid-template-columns:1fr}.ig-grid{grid-template-columns:1fr 1fr}.ig-card{aspect-ratio:4/5}.gear-grid{grid-template-columns:1fr 1fr}.zones-grid{grid-template-columns:1fr 1fr}.faq-grid{grid-template-columns:1fr}.contact-wrap{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.about-section,.davinci-section,.results-section,.portfolio-section,.ig-section,.niches-section,.process-section,.pricing-section,.gear-section,.zones-section,.faq-section,.contact-section{padding-left:1.2rem;padding-right:1.2rem}.divider{padding:0 1.2rem}footer{padding:2.5rem 1.2rem}.cursor,.cursor-ring{display:none}}
 @media(max-width:560px){.niches-grid{grid-template-columns:1fr}.hero-ctas{flex-direction:column;align-items:center}.btn-primary,.btn-secondary{width:100%;justify-content:center;max-width:340px}.pricing-card{padding:3.5rem 1.8rem}.ig-grid{grid-template-columns:1fr}.proc-grid{grid-template-columns:1fr}.gear-grid{grid-template-columns:1fr 1fr}.zones-grid{grid-template-columns:1fr 1fr}}
+
+/* ─── PORTFOLIO SCROLL-EXPAND HERO — v42 ─── */
+.portfolio-section{padding:0!important}
+.pf-section-header{padding:5rem 4rem 3rem;position:relative;z-index:2;text-align:center}
+.pf-scroll-driver{height:220vh;position:relative}
+.pf-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.pf-bg{position:absolute;inset:0;background-size:cover;background-position:center;will-change:opacity}
+.pf-media{position:relative;z-index:2;overflow:hidden;width:480px;height:270px}
+.pf-media-frame{position:relative;width:100%;height:100%}
+.pf-media-frame iframe{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;border:none}
+.pf-split-title{position:absolute;top:50%;left:0;right:0;transform:translateY(calc(-50% - 160px));z-index:3;pointer-events:none;display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:.2em;padding:0 2rem}
+.pf-w1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,5.5rem);font-weight:300;color:#C9A84C;will-change:transform,opacity;display:inline-block}
+.pf-w2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,5.5rem);font-weight:300;color:#F5F0E8;will-change:transform,opacity;display:inline-block}
+.pf-sublabels{position:absolute;bottom:calc(50% - 180px);left:0;right:0;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:0 4rem;pointer-events:none}
+.pf-date-lbl{font-family:'Tenor Sans',sans-serif;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:#8A8478;will-change:transform,opacity;display:inline-block}
+.pf-scroll-hint-lbl{font-family:'Tenor Sans',sans-serif;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:#8A8478;will-change:transform,opacity;display:inline-block}
+.pf-after-info{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%) translateY(20px);z-index:4;text-align:center;width:min(90%,640px);opacity:0;will-change:opacity,transform;pointer-events:none}
+.pf-after-info.visible{pointer-events:auto}
+.pf-after-tag{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:#C9A84C;display:block;margin-bottom:.6rem}
+.pf-after-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:400;color:#F5F0E8;margin-bottom:.7rem;line-height:1.2}
+.pf-after-desc{font-size:.9rem;color:#8A8478;line-height:1.8;margin-bottom:1rem}
+.pf-after-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem}
+.pf-grid-single{display:flex;justify-content:center;padding:4rem 4rem;background:rgba(201,168,76,.06)}
+.pf-grid-single .pf-placeholder{width:100%;max-width:560px}
+@media(max-width:768px){
+  .pf-section-header{padding:4rem 1.2rem 2rem}
+  .pf-w1,.pf-w2{font-size:clamp(1.8rem,8vw,3rem)}
+  .pf-split-title{transform:translateY(calc(-50% - 120px));gap:.15em}
+  .pf-sublabels{padding:0 1.2rem;bottom:calc(50% - 140px)}
+  .pf-grid-single{padding:3rem 1.2rem}
+  .pf-media{width:320px;height:180px}
+}
 </style>
 </head>
 <body>
@@ -511,7 +543,7 @@ Hablemos
 <section class="about-section" id="quiensoy">
 <div class="about-visual r-left" id="aboutVisual">
 <div class="about-frame">
-<img src="https://raw.githubusercontent.com/torcua27-maker/Torcuafpv/main/torcua.JPG" alt="Torcua — Piloto FPV" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;filter:brightness(.9) contrast(1.05)">
+<img src="/torcua.JPG" alt="Torcua — Piloto FPV" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;filter:brightness(.9) contrast(1.05)">
 <div class="about-frame-glow"></div>
 </div>
 <div class="about-badge"><span class="about-badge-num">3</span><span class="about-badge-txt">años en vuelo</span></div>
@@ -550,7 +582,7 @@ Hablemos
 </div>
 <div class="dv-right">
 <div class="dv-logo-wrap">
-<img src="https://raw.githubusercontent.com/torcua27-maker/Torcuafpv/main/davinci.jpg" alt="DaVinci Resolve Studio" loading="lazy" decoding="async" style="width:100%;display:block;border:1px solid rgba(201,168,76,.15);filter:brightness(.95)">
+<img src="/davinci.jpg" alt="DaVinci Resolve Studio" loading="lazy" decoding="async" style="width:100%;display:block;border:1px solid rgba(201,168,76,.15);filter:brightness(.95)">
 <span class="dv-lbl">DaVinci Resolve Studio</span>
 <span class="dv-sub">Professional Grade Editing</span>
 </div>
@@ -576,26 +608,40 @@ Hablemos
 <div class="divider"><div class="divider-line"><div class="divider-diamond"></div></div></div>
 
 <!-- PORTFOLIO -->
-<section class="portfolio-section reveal" id="portfolio">
-<span class="section-label" style="text-align:center;display:block">Portfolio</span>
-<h2>Vuelos que<br><em>cuentan historias</em></h2>
-<p class="pf-intro">Cada proyecto, una perspectiva irrepetible.</p>
-<div class="pf-grid">
-<div class="pf-item reveal d1">
-<div class="pf-video"><iframe src="https://player.vimeo.com/video/1185305246?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="Casco Antiguo Badajoz"></iframe></div>
-<div class="pf-info"><span class="pf-tag">Turismo · Patrimonio</span><h3 class="pf-title">Casco Antiguo de Badajoz</h3><p class="pf-desc">Vuelos ultra-suaves al atardecer a través del corazón histórico de Badajoz. Luz dorada, piedra antigua y movimiento continuo sin un solo corte.</p><div class="pf-pills"><span class="pf-pill">Turismo local</span><span class="pf-pill">Atardecer</span><span class="pf-pill">Urbano</span><span class="pf-pill">FPV Smooth</span></div></div>
+<section class="portfolio-section" id="portfolio">
+<div class="pf-section-header">
+  <span class="section-label" style="display:block">Portfolio</span>
+  <h2 class="reveal">Vuelos que<br><em>cuentan historias</em></h2>
+  <p class="pf-intro reveal">Cada proyecto, una perspectiva irrepetible.</p>
 </div>
-<div class="pf-item reveal d2">
-<div class="pf-video"><iframe src="https://player.vimeo.com/video/1185305247?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="Garganta de los Infiernos"></iframe></div>
-<div class="pf-info"><span class="pf-tag">Turismo · Naturaleza</span><h3 class="pf-title">Garganta de los Infiernos — Jerte</h3><p class="pf-desc">Vuelo cinematográfico sobre uno de los parajes más espectaculares de Extremadura. La naturaleza salvaje desde el ángulo que hace justicia a su escala.</p><div class="pf-pills"><span class="pf-pill">Paraje natural</span><span class="pf-pill">Extremadura</span><span class="pf-pill">Paisaje</span></div></div>
+<div class="pf-scroll-driver" id="pfScrollDriver">
+  <div class="pf-sticky" id="pfSticky">
+    <div class="pf-bg" id="pfBg" style="background-image:url('/portfolio-vaiven.jpg')"></div>
+    <div class="pf-media" id="pfMedia">
+      <div class="pf-media-frame" id="pfMediaFrame"></div>
+    </div>
+    <div class="pf-split-title">
+      <span class="pf-w1" id="pfW1">Vaivén</span>
+      <span class="pf-w2" id="pfW2">Carnaval de Badajoz</span>
+    </div>
+    <div class="pf-sublabels">
+      <span class="pf-date-lbl" id="pfDateLbl">Eventos · Cultura</span>
+      <span class="pf-scroll-hint-lbl" id="pfScrollHintLbl">Desliza para expandir</span>
+    </div>
+    <div class="pf-after-info" id="pfAfterInfo">
+      <span class="pf-after-tag">Eventos · Cultura</span>
+      <h3 class="pf-after-title">Carnaval — Agrupación El Vaivén</h3>
+      <p class="pf-after-desc">Resumen aéreo del carnaval de Badajoz con foco en la agrupación El Vaivén. Movimiento, color y energía captados desde el centro de la acción.</p>
+      <div class="pf-after-pills">
+        <span class="pf-pill">Evento cultural</span>
+        <span class="pf-pill">Carnaval</span>
+        <span class="pf-pill">Badajoz</span>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="pf-item reveal d3">
-<div class="pf-video"><iframe src="https://player.vimeo.com/video/1185305238?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="Carnaval El Vaivén"></iframe></div>
-<div class="pf-info"><span class="pf-tag">Eventos · Cultura</span><h3 class="pf-title">Carnaval — Agrupación El Vaivén</h3><p class="pf-desc">Resumen aéreo del carnaval de Badajoz con foco en la agrupación El Vaivén. Movimiento, color y energía captados desde el centro de la acción.</p><div class="pf-pills"><span class="pf-pill">Evento cultural</span><span class="pf-pill">Carnaval</span><span class="pf-pill">Badajoz</span></div></div>
-</div>
-<div class="pf-item reveal d4">
-<div class="pf-placeholder"><div class="pf-placeholder-inner"><p>Tu proyecto aquí</p><small>¿Quieres que tu marca, destino o evento sea el próximo en este portfolio?</small><a href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20quiero%20que%20mi%20proyecto%20aparezca%20en%20tu%20portfolio." target="_blank" rel="noopener">Contáctame →</a></div></div>
-</div>
+<div class="pf-grid-single">
+  <div class="pf-placeholder"><div class="pf-placeholder-inner"><p>Tu proyecto aquí</p><small>¿Quieres que tu marca, destino o evento sea el próximo en este portfolio?</small><a href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20quiero%20que%20mi%20proyecto%20aparezca%20en%20tu%20portfolio." target="_blank" rel="noopener">Contáctame →</a></div></div>
 </div>
 </section>
 
@@ -730,7 +776,7 @@ Hablemos
 <div class="form-group"><label class="form-label" for="f-contacto">Teléfono o email</label><input id="f-contacto" class="form-input" type="text" placeholder="+34 600 000 000" required></div>
 </div>
 <div class="form-group"><label class="form-label" for="f-tipo">Tipo de proyecto</label><select id="f-tipo" class="form-select form-input"><option value="">Selecciona una opción</option><option>Turismo o destino</option><option>Inmobiliaria o finca</option><option>Evento o boda</option><option>Marca o corporativo</option><option>Cultura o festividad</option><option>Naturaleza o deporte</option><option>Otro</option></select></div>
-<div class="form-group"><label class="form-label" for="f-fecha">Fecha aproximada</label><input id="f-fecha" class="form-input" type="text" placeholder="Ej: junio 2025 o sin fecha aún"></div>
+<div class="form-group"><label class="form-label" for="f-fecha">Fecha aproximada</label><input id="f-fecha" class="form-input" type="text" placeholder="Ej: junio 2026 o sin fecha aún"></div>
 <div class="form-group"><label class="form-label" for="f-mensaje">Cuéntame tu proyecto</label><textarea id="f-mensaje" class="form-textarea form-input" placeholder="Qué necesitas, dónde, cualquier detalle..."></textarea></div>
 <button type="submit" class="form-submit"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Enviar por WhatsApp</button>
 <p class="form-note">Al enviar, abrirás WhatsApp con tu mensaje ya redactado.</p>
@@ -771,8 +817,8 @@ Hablemos
 <a href="https://www.instagram.com/torcuafpv" target="_blank" rel="noopener">@torcuafpv</a>
 <a href="#">Badajoz, Extremadura</a>
 </div>
-<p class="footer-copy">© 2025 TorcuaFPV</p>
-</footer>
+<p class="footer-copy">© <span id="yr">2026</span> TorcuaFPV</p>
+</footer><script>var _y=document.getElementById("yr");if(_y)_y.textContent=new Date().getFullYear();</script>
 <script>
 const canvas=document.getElementById('particles');
 const ctx=canvas.getContext('2d');
@@ -1148,6 +1194,111 @@ window.addEventListener('scroll',()=>{
 if(!scrollRafPending){scrollRafPending=true;requestAnimationFrame(onScrollEffects);}
 },{passive:true});
 onScrollEffects();
+
+// ─── PORTFOLIO SCROLL-EXPAND — sticky driver, Lenis-compatible ───────────
+(function(){
+  var driver=document.getElementById('pfScrollDriver');
+  var media=document.getElementById('pfMedia');
+  var mediaFrame=document.getElementById('pfMediaFrame');
+  var bg=document.getElementById('pfBg');
+  var w1=document.getElementById('pfW1');
+  var w2=document.getElementById('pfW2');
+  var dateLbl=document.getElementById('pfDateLbl');
+  var scrollHintLbl=document.getElementById('pfScrollHintLbl');
+  var afterInfo=document.getElementById('pfAfterInfo');
+  if(!driver)return;
+
+  // Lazy-load Vimeo iframe
+  var iframeLoaded=false;
+  var iframeObserver=new IntersectionObserver(function(entries){
+    if(entries[0].isIntersecting&&!iframeLoaded){
+      iframeLoaded=true;
+      var ifr=document.createElement('iframe');
+      ifr.src='https://player.vimeo.com/video/1190598176?background=1&autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0';
+      ifr.setAttribute('frameborder','0');
+      ifr.setAttribute('allow','autoplay; fullscreen; picture-in-picture');
+      mediaFrame.appendChild(ifr);
+      iframeObserver.disconnect();
+    }
+  },{rootMargin:'200px'});
+  iframeObserver.observe(driver);
+
+  function lerp(a,b,t){return a+(b-a)*t;}
+  function easeInOut(t){return t<0.5?2*t*t:1-Math.pow(-2*t+2,2)/2;}
+
+  var W_START=480,H_START=270;
+  var rafId=null;
+  var lastRaw=-1;
+
+  function update(){
+    rafId=null;
+    var rect=driver.getBoundingClientRect();
+    var driverH=driver.offsetHeight;
+    var vpH=window.innerHeight;
+    var vpW=window.innerWidth;
+    var raw=Math.max(0,Math.min(1,-rect.top/(driverH-vpH)));
+    if(Math.abs(raw-lastRaw)<0.0003)return;
+    lastRaw=raw;
+    var p=easeInOut(raw);
+
+    // Media size — grows 16:9 from small to near-fullscreen
+    var wEnd=vpW*0.92;
+    var hEnd=vpH*0.88;
+    // Constrain to 16:9
+    if(wEnd/hEnd>16/9) wEnd=hEnd*16/9;
+    else hEnd=wEnd*9/16;
+    var mW=lerp(W_START,wEnd,p);
+    var mH=mW*9/16;
+    media.style.width=mW+'px';
+    media.style.height=mH+'px';
+
+    // iframe always covers the frame
+    var ifr=mediaFrame.querySelector('iframe');
+    if(ifr){
+      var iW=Math.max(mW,mH*16/9)+2;
+      var iH=iW*9/16;
+      ifr.style.width=iW+'px';
+      ifr.style.height=iH+'px';
+    }
+
+    // Background fades out
+    bg.style.opacity=Math.max(0,1-p*1.8);
+
+    // Title split — words fly apart as media expands
+    var textX=lerp(0,14,p);
+    w1.style.transform='translateX(-'+textX+'vw)';
+    w2.style.transform='translateX('+textX+'vw)';
+    // Title opacity: fade in at start, fade out near full expansion
+    var titleOp=raw<0.06?raw/0.06:raw>0.72?Math.max(0,1-(raw-0.72)/0.12):1;
+    w1.style.opacity=titleOp;
+    w2.style.opacity=titleOp;
+
+    // Sub-labels
+    var labelX=lerp(0,7,p);
+    dateLbl.style.transform='translateX(-'+labelX+'vw)';
+    scrollHintLbl.style.transform='translateX('+labelX+'vw)';
+    var labelOp=raw<0.06?raw/0.06:raw>0.5?Math.max(0,1-(raw-0.5)/0.18):1;
+    dateLbl.style.opacity=labelOp;
+    scrollHintLbl.style.opacity=labelOp;
+
+    // After-info appears when near fully expanded
+    if(raw>=0.85){
+      var ai=Math.min(1,(raw-0.85)/0.1);
+      afterInfo.style.opacity=ai;
+      afterInfo.style.transform='translateX(-50%) translateY('+(1-ai)*18+'px)';
+      afterInfo.classList.add('visible');
+    } else {
+      afterInfo.style.opacity='0';
+      afterInfo.style.transform='translateX(-50%) translateY(18px)';
+      afterInfo.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll',function(){
+    if(!rafId)rafId=requestAnimationFrame(update);
+  },{passive:true});
+  update();
+})();
 </script>
 </body>
 </html>
