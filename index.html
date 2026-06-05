@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="Vídeo aéreo FPV que captura miradas, emociones y clientes en los primeros segundos.">
 <meta name="twitter:image" content="https://torcuafpv.netlify.app/og-image.jpg">
 <link rel="canonical" href="https://torcuafpv.netlify.app">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚁</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='25' fill='none' stroke='%23C9A84C' stroke-width='3.5'/><path d='M32 5 V19 M32 45 V59 M5 32 H19 M45 32 H59' stroke='%23C9A84C' stroke-width='3.5' stroke-linecap='round'/><circle cx='32' cy='32' r='4.5' fill='%23C9A84C'/></svg>">
 <meta name="theme-color" content="#C9A84C">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"TorcuaFPV","description":"Piloto FPV cinematográfico en Badajoz, Extremadura. Vídeo aéreo para turismo, eventos, inmobiliarias, cultura y marcas.","url":"https://torcuafpv.netlify.app","image":"https://torcuafpv.netlify.app/og-image.jpg","email":"torcuafpv@gmail.com","telephone":"+34633210907","priceRange":"€€","founder":{"@type":"Person","name":"Torcuato"},"address":{"@type":"PostalAddress","addressLocality":"Badajoz","addressRegion":"Extremadura","addressCountry":"ES"},"geo":{"@type":"GeoCoordinates","latitude":38.8794,"longitude":-6.9707},"areaServed":[{"@type":"AdministrativeArea","name":"Extremadura"},{"@type":"Country","name":"España"}],"sameAs":["https://www.instagram.com/torcuafpv"],"knowsAbout":["Vídeo aéreo FPV","Dron cinematográfico","Postproducción DaVinci Resolve Studio"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -494,6 +494,21 @@ footer{font-size:.95rem}
   .pf-media{width:320px;height:180px}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}html{scroll-behavior:auto!important}.reveal,.r-left,.r-right,.r-scale{opacity:1!important;transform:none!important}#particles,.cursor,.cursor-ring,.scroll-line{display:none!important}.hero-video-bg iframe{display:none}.about-frame img{transform:none!important}}
+.brand-mark{width:1.1em;height:1.1em;display:inline-block;vertical-align:-.16em;margin-right:.5em;color:#C9A84C;flex-shrink:0}
+.nav-logo,.footer-logo{display:inline-flex;align-items:center}
+.loader-mark{width:56px;height:56px;color:#C9A84C;margin:0 auto 1.4rem;opacity:0;animation:fadeUp .9s 1.95s forwards}
+.loader-mark svg{width:100%;height:100%;display:block}
+.grain{position:fixed;inset:0;z-index:9996;pointer-events:none;opacity:.055;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero-telemetry{position:absolute;left:2.2rem;bottom:2.2rem;z-index:2;font-family:'Courier New',monospace;font-size:.58rem;letter-spacing:.18em;line-height:1.95;color:rgba(201,168,76,.5);text-transform:uppercase}
+.hero-telemetry b{color:rgba(245,240,232,.5);font-weight:400}
+.hud-corners{position:absolute;inset:0;pointer-events:none;z-index:3}
+.hud-corners i{position:absolute;width:20px;height:20px;border:1.5px solid rgba(201,168,76,.75)}
+.hud-corners i:nth-child(1){top:0;left:0;border-right:0;border-bottom:0}
+.hud-corners i:nth-child(2){top:0;right:0;border-left:0;border-bottom:0}
+.hud-corners i:nth-child(3){bottom:0;left:0;border-right:0;border-top:0}
+.hud-corners i:nth-child(4){bottom:0;right:0;border-left:0;border-top:0}
+@media(max-width:768px){.hero-telemetry{display:none}.loader-mark{width:46px;height:46px}}
+@media(prefers-reduced-motion:reduce){.grain{display:none}.loader-mark{animation:none;opacity:1}}
 </style>
 </head>
 <body>
@@ -501,6 +516,7 @@ footer{font-size:.95rem}
 <canvas id="loader-canvas"></canvas>
 <div class="loader-vignette"></div>
 <div class="loader-center">
+<div class="loader-mark"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="25" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="32" r="12.5" fill="none" stroke="currentColor" stroke-width="2" opacity=".5"/><path d="M32 5 V18 M32 46 V59 M5 32 H18 M46 32 H59" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="32" r="3" fill="currentColor"/></svg></div>
 <div class="loader-logo" id="loaderLogo">Torcua<span>FPV</span></div>
 <div class="loader-tagline" id="loaderTagline">Vuela con nosotros.</div>
 </div>
@@ -509,9 +525,10 @@ footer{font-size:.95rem}
 <div class="cursor-ring" id="cursorRing"></div>
 <a href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20me%20interesa%20hablar%20sobre%20un%20proyecto." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
 <canvas id="particles"></canvas>
+<div class="grain"></div>
 
 <nav id="navbar">
-<a href="#" class="nav-logo">Torcua<span>FPV</span></a>
+<a href="#" class="nav-logo"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="25" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="32" cy="32" r="12.5" fill="none" stroke="currentColor" stroke-width="2.4" opacity=".5"/><path d="M32 6 V18 M32 46 V58 M6 32 H18 M46 32 H58" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="32" cy="32" r="2.8" fill="currentColor"/></svg>Torcua<span>FPV</span></a>
 <div class="nav-right">
 <ul class="nav-links">
 <li><a href="#quiensoy">Quién soy</a></li>
@@ -556,6 +573,7 @@ Hablemos
 <a href="#portfolio" class="btn-secondary">Ver trabajos</a>
 </div>
 </div>
+<div class="hero-telemetry">38.8794°N · 6.9707°W<br><b>Badajoz · FPV · 4K</b></div>
 <div class="scroll-hint"><span>Descubre</span><div class="scroll-line"></div></div>
 </section>
 
@@ -646,6 +664,7 @@ Hablemos
     <div class="pf-bg" id="pfBg" style="background-image:url('/portfolio-vaiven.jpg')"></div>
     <div class="pf-media" id="pfMedia">
       <div class="pf-media-frame" id="pfMediaFrame"></div>
+<div class="hud-corners"><i></i><i></i><i></i><i></i></div>
     </div>
     <div class="pf-split-title">
       <span class="pf-w1" id="pfW1">Vaivén</span>
@@ -837,7 +856,7 @@ Hablemos
 </section>
 
 <footer>
-<div class="footer-logo">Torcua<span>FPV</span></div>
+<div class="footer-logo"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="25" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="32" cy="32" r="12.5" fill="none" stroke="currentColor" stroke-width="2.4" opacity=".5"/><path d="M32 6 V18 M32 46 V58 M6 32 H18 M46 32 H58" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="32" cy="32" r="2.8" fill="currentColor"/></svg>Torcua<span>FPV</span></div>
 <div class="footer-links">
 <a href="mailto:torcuafpv@gmail.com">torcuafpv@gmail.com</a>
 <a href="https://wa.me/34633210907" target="_blank" rel="noopener">+34 633 210 907</a>
