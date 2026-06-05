@@ -496,7 +496,7 @@ footer{font-size:.95rem}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}html{scroll-behavior:auto!important}.reveal,.r-left,.r-right,.r-scale{opacity:1!important;transform:none!important}#particles,.cursor,.cursor-ring,.scroll-line{display:none!important}.hero-video-bg iframe{display:none}.about-frame img{transform:none!important}}
 .brand-mark{height:1.45em;width:auto;display:inline-block;margin-right:.55em;flex-shrink:0}
 .nav-logo,.footer-logo{display:inline-flex;align-items:center}
-.loader-mark{height:72px;display:flex;justify-content:center;margin:0 auto 1.4rem;opacity:0;animation:fadeUp .9s 1.95s forwards}
+.loader-mark{height:120px;display:flex;justify-content:center;margin:0;opacity:0;will-change:transform,opacity,filter;animation:wingReveal 1.15s 1.45s cubic-bezier(.16,1,.3,1) forwards}
 .loader-mark img{height:100%;width:auto;display:block}
 .grain{position:fixed;inset:0;z-index:9996;pointer-events:none;opacity:.055;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .hero-telemetry{position:absolute;left:2.2rem;bottom:2.2rem;z-index:2;font-family:'Courier New',monospace;font-size:.58rem;letter-spacing:.18em;line-height:1.95;color:rgba(201,168,76,.5);text-transform:uppercase}
@@ -507,8 +507,9 @@ footer{font-size:.95rem}
 .hud-corners i:nth-child(2){top:0;right:0;border-left:0;border-bottom:0}
 .hud-corners i:nth-child(3){bottom:0;left:0;border-right:0;border-top:0}
 .hud-corners i:nth-child(4){bottom:0;right:0;border-left:0;border-top:0}
-@media(max-width:768px){.hero-telemetry{display:none}.loader-mark{width:46px;height:46px}}
+@media(max-width:768px){.hero-telemetry{display:none}.loader-mark{height:88px}}
 @media(prefers-reduced-motion:reduce){.grain{display:none}.loader-mark{animation:none;opacity:1}}
+@keyframes wingReveal{0%{opacity:0;transform:scale(.72) translateY(16px);filter:blur(7px) drop-shadow(0 0 0 rgba(201,168,76,0))}55%{opacity:1;filter:blur(0) drop-shadow(0 0 34px rgba(201,168,76,.55))}100%{opacity:1;transform:scale(1) translateY(0);filter:blur(0) drop-shadow(0 0 16px rgba(201,168,76,.32))}}
 </style>
 </head>
 <body>
@@ -517,8 +518,6 @@ footer{font-size:.95rem}
 <div class="loader-vignette"></div>
 <div class="loader-center">
 <div class="loader-mark"><img src="/logo-wing.png" alt="" aria-hidden="true"></div>
-<div class="loader-logo" id="loaderLogo">Torcua<span>FPV</span></div>
-<div class="loader-tagline" id="loaderTagline">Vuela con nosotros.</div>
 </div>
 </div>
 <div class="cursor" id="cursor"></div>
@@ -1162,10 +1161,6 @@ c.tpl=templates[Math.floor(Math.random()*templates.length)];
 drawCloud(c);
 });
 if(progress>0.3)drawSpeedLine(progress);
-if(elapsed>1.9&&!loaderLogo.classList.contains('show')){
-loaderLogo.classList.add('show');
-setTimeout(()=>loaderTagline.classList.add('show'),150);
-}
 if(elapsed<3.2)requestAnimationFrame(frame);
 }
 requestAnimationFrame(frame);
