@@ -23,10 +23,10 @@
 <link rel="canonical" href="https://torcuafpv.netlify.app">
 <link rel="icon" type="image/png" href="/favicon.png">
 <meta name="theme-color" content="#C9A84C">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"TorcuaFPV","description":"Piloto FPV cinematográfico en Badajoz, Extremadura. Vídeo aéreo para turismo, eventos, inmobiliarias, cultura y marcas.","url":"https://torcuafpv.netlify.app","image":"https://torcuafpv.netlify.app/og-image.jpg","email":"torcuafpv@gmail.com","telephone":"+34633210907","priceRange":"€€","founder":{"@type":"Person","name":"Torcuato"},"address":{"@type":"PostalAddress","addressLocality":"Badajoz","addressRegion":"Extremadura","addressCountry":"ES"},"geo":{"@type":"GeoCoordinates","latitude":38.8794,"longitude":-6.9707},"areaServed":[{"@type":"AdministrativeArea","name":"Extremadura"},{"@type":"Country","name":"España"}],"sameAs":["https://www.instagram.com/torcuafpv"],"knowsAbout":["Vídeo aéreo FPV","Dron cinematográfico","Postproducción DaVinci Resolve Studio"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"TorcuaFPV","description":"Piloto FPV cinematográfico en Badajoz, Extremadura. Vídeo aéreo para turismo, eventos, inmobiliarias, cultura y marcas.","url":"https://torcuafpv.netlify.app","image":"https://torcuafpv.netlify.app/og-image.jpg","email":"torcuafpv@gmail.com","telephone":"+34633210907","priceRange":"€€","founder":{"@type":"Person","name":"Torcuato"},"address":{"@type":"PostalAddress","addressLocality":"Badajoz","addressRegion":"Extremadura","addressCountry":"ES"},"geo":{"@type":"GeoCoordinates","latitude":38.8794,"longitude":-6.9707},"openingHours":"Mo-Sa 09:00-20:00","areaServed":[{"@type":"City","name":"Badajoz"},{"@type":"City","name":"Cáceres"},{"@type":"City","name":"Mérida"},{"@type":"AdministrativeArea","name":"Extremadura"},{"@type":"Country","name":"España"}],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Servicios de vídeo aéreo FPV","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Vídeo FPV para turismo y destinos en Extremadura"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Vídeo aéreo para bodas y eventos en Badajoz"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Vídeo FPV para inmobiliarias y fincas en Extremadura"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Producción audiovisual con dron para marcas y corporativo"}}]},"sameAs":["https://www.instagram.com/torcuafpv"],"knowsAbout":["Vídeo aéreo FPV","Dron cinematográfico","Postproducción DaVinci Resolve Studio"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Tenor+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Tenor+Sans&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Tenor+Sans&display=swap"></noscript>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -46,10 +46,10 @@ body::after{content:'';position:fixed;bottom:0;left:0;right:0;height:55vh;backgr
 #loader-canvas{position:absolute;inset:0;width:100%;height:100%}
 .loader-vignette{position:absolute;inset:0;background:radial-gradient(ellipse 75% 75% at 50% 50%,transparent 20%,rgba(0,0,0,.75) 100%);pointer-events:none;z-index:2}
 .loader-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:3;pointer-events:none}
-.loader-logo{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;letter-spacing:.25em;color:#C9A84C;text-transform:uppercase;opacity:0;transform:translateY(14px);transition:opacity .7s,transform .7s;text-shadow:0 0 50px rgba(201,168,76,.4)}
-.loader-logo span{color:#F5F0E8;font-weight:300}
-.loader-tagline{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:rgba(245,240,232,.35);letter-spacing:.25em;opacity:0;transform:translateY(8px);transition:opacity .7s .15s,transform .7s .15s;margin-top:.6rem}
-.loader-logo.show,.loader-tagline.show{opacity:1;transform:translateY(0)}
+
+
+
+
 .cursor{position:fixed;width:10px;height:10px;background:#C9A84C;border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .1s,opacity .3s;mix-blend-mode:difference}
 .cursor-ring{position:fixed;width:36px;height:36px;border:1px solid rgba(201,168,76,.5);border-radius:50%;pointer-events:none;z-index:9997;transform:translate(-50%,-50%);transition:transform .18s ease,width .3s,height .3s,opacity .3s}
 .divider{padding:0 4rem}
@@ -318,7 +318,7 @@ section{position:relative;z-index:1}
 .faq-item.open .faq-arrow{background:#C9A84C;color:#000;transform:rotate(45deg)}
 .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease}
 .faq-answer p{padding:0 2rem 1.8rem;font-size:.9rem;color:#8A8478;line-height:1.9}
-.faq-item.open .faq-answer{max-height:300px}
+.faq-item.open .faq-answer{max-height:600px}
 .pricing-section{padding:5rem 4rem;text-align:center}
 .pricing-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;margin-bottom:4rem}
 .pricing-section h2 em{font-style:italic;color:#C9A84C}
@@ -510,9 +510,16 @@ footer{font-size:.95rem}
 @media(max-width:768px){.hero-telemetry{display:none}.loader-mark{height:88px}}
 @media(prefers-reduced-motion:reduce){.grain{display:none}.loader-mark{animation:none;opacity:1}}
 @keyframes wingReveal{0%{opacity:0;transform:scale(.72) translateY(16px);filter:blur(7px) drop-shadow(0 0 0 rgba(201,168,76,0))}55%{opacity:1;filter:blur(0) drop-shadow(0 0 34px rgba(201,168,76,.55))}100%{opacity:1;transform:scale(1) translateY(0);filter:blur(0) drop-shadow(0 0 16px rgba(201,168,76,.32))}}
+a:focus-visible,button:focus-visible,.faq-item:focus-visible,[tabindex]:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,.nav-cta:focus-visible,.wa-float:focus-visible,.mm-link:focus-visible{outline:2px solid #C9A84C;outline-offset:3px;border-radius:2px}
+.skip-link{position:fixed;left:-9999px;top:0;z-index:10000;background:#C9A84C;color:#000;padding:.7rem 1.2rem;font-family:'Tenor Sans',sans-serif;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
+.skip-link:focus{left:1rem;top:1rem}
+.ic{width:1em;height:1em;display:inline-block;vertical-align:-.125em;stroke:#C9A84C;stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:768px){.hero-video-bg iframe{display:none}.hero-video-bg{background:radial-gradient(ellipse at 50% 38%,#0c0c12,#000 72%)}}
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuánto tarda en estar listo el vídeo?","acceptedAnswer":{"@type":"Answer","text":"Normalmente entre 2 y 3 días desde el rodaje. Dependiendo de la complejidad del proyecto o del volumen de material, puede variar, pero siempre te doy una fecha estimada antes de empezar."}},{"@type":"Question","name":"¿Vuelas en interiores también?","acceptedAnswer":{"@type":"Answer","text":"Sí, tanto en interiores como en exteriores. Para interiores utilizo drones específicos más compactos y seguros, adaptados al espacio y a la presencia de personas."}},{"@type":"Question","name":"¿En qué zonas trabajas?","acceptedAnswer":{"@type":"Answer","text":"Principalmente en Extremadura. También me desplazo fuera a cualquier punto de España, con un coste adicional de desplazamiento que valoramos según el proyecto."}},{"@type":"Question","name":"¿Necesitas permisos para volar?","acceptedAnswer":{"@type":"Answer","text":"Depende del proyecto. En muchos casos solo es necesaria una comunicación al Ministerio del Interior, que gestiono yo directamente. Para proyectos más complejos trabajo con Panorámica, empresa especializada en permisos de vuelo."}},{"@type":"Question","name":"¿En qué formato entrego los vídeos?","acceptedAnswer":{"@type":"Answer","text":"Me adapto a lo que necesites. Si el vídeo va a redes sociales, exporto en el formato óptimo para cada plataforma. Si va a web, pantalla o presentación, ajusto en consecuencia. Para eso está DaVinci Resolve Studio."}},{"@type":"Question","name":"¿Por qué elegirte a ti y no a una empresa grande?","acceptedAnswer":{"@type":"Answer","text":"Las empresas grandes son frías y se ciñen a un contrato. Yo doy un trato cercano y totalmente personalizado. Estoy atento a cada detalle, soy resolutivo y no paro hasta conseguir el mejor resultado posible."}}]}</script>
 </head>
 <body>
+<a href="#contenido" class="skip-link">Saltar al contenido</a>
 <div id="loader">
 <canvas id="loader-canvas"></canvas>
 <div class="loader-vignette"></div>
@@ -522,12 +529,12 @@ footer{font-size:.95rem}
 </div>
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
-<a href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20me%20interesa%20hablar%20sobre%20un%20proyecto." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<a href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20me%20interesa%20hablar%20sobre%20un%20proyecto." class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp (se abre en una pestaña nueva)"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
 <canvas id="particles"></canvas>
 <div class="grain"></div>
 
 <nav id="navbar">
-<a href="#" class="nav-logo"><img class="brand-mark" src="/logo-wing.png" alt="" aria-hidden="true">Torcua<span>FPV</span></a>
+<a href="#inicio" class="nav-logo"><img class="brand-mark" src="/logo-wing.png" alt="" aria-hidden="true">Torcua<span>FPV</span></a>
 <div class="nav-right">
 <ul class="nav-links">
 <li><a href="#quiensoy">Quién soy</a></li>
@@ -558,17 +565,18 @@ Hablemos
 <a class="mm-cta" href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20me%20interesa%20hablar%20sobre%20un%20proyecto." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Hablemos</a>
 </div>
 
+<main id="contenido">
 <section class="hero" id="inicio">
 <div class="hero-video-bg">
-<iframe src="https://player.vimeo.com/video/1189111717?autoplay=1&muted=1&loop=1&background=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" title="Hero BG"></iframe>
+<iframe loading="lazy" src="https://player.vimeo.com/video/1189111717?autoplay=1&muted=1&loop=1&background=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" title="Hero BG"></iframe>
 </div>
 <div class="hero-content">
 <p class="hero-eyebrow">Piloto FPV Cinematográfico · Badajoz, Extremadura</p>
-<h1>Tu marca vista<br><em>desde otro mundo</em></h1>
+<h1>Tu proyecto en Extremadura<br><em>desde otro mundo</em></h1>
 <p class="hero-sub">Vídeo aéreo FPV que captura miradas, emociones y clientes en los primeros segundos.</p>
 <div class="hero-promise">Primera colaboración con precio exclusivo</div>
 <div class="hero-ctas">
-<a href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20quiero%20hablar%20sobre%20un%20presupuesto%20para%20mi%20proyecto." class="btn-primary" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Pide tu presupuesto</a>
+<a href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20quiero%20hablar%20sobre%20un%20presupuesto%20para%20mi%20proyecto." class="btn-primary" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Hablemos de tu proyecto</a>
 <a href="#portfolio" class="btn-secondary">Ver trabajos</a>
 </div>
 </div>
@@ -587,7 +595,7 @@ Hablemos
 <section class="about-section" id="quiensoy">
 <div class="about-visual r-left" id="aboutVisual">
 <div class="about-frame">
-<img src="/torcua.JPG" alt="Torcua — Piloto FPV" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;filter:brightness(.9) contrast(1.05)">
+<img src="/torcua.JPG" alt="Torcuato, piloto FPV profesional en Badajoz, Extremadura" width="1200" height="2133" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;filter:brightness(.9) contrast(1.05)">
 <div class="about-frame-glow"></div>
 </div>
 <div class="about-badge"><span class="about-badge-num">3</span><span class="about-badge-txt">años en vuelo</span></div>
@@ -603,7 +611,7 @@ Hablemos
 <div><span class="about-stat-num" data-target="3" id="counter2">0</span><span class="about-stat-lbl">Años de experiencia</span></div>
 <div><span class="about-stat-num">2–3<span style="font-size:1.5rem">d</span></span><span class="about-stat-lbl">Entrega del vídeo</span></div>
 </div>
-<div class="aesa-badge"><span class="aesa-badge-icon">🏅</span><div class="aesa-badge-text"><span class="aesa-badge-title">Certificado A1/A3 · AESA</span><span class="aesa-badge-sub">Piloto certificado · Vuelo legal en España</span></div></div>
+<div class="aesa-badge"><span class="aesa-badge-icon"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></span><div class="aesa-badge-text"><span class="aesa-badge-title">Certificado A1/A3 · AESA</span><span class="aesa-badge-sub">Piloto certificado · Vuelo legal en España</span></div></div>
 </div>
 </section>
 
@@ -618,15 +626,15 @@ Hablemos
 <p>El vuelo es solo el principio. Lo que diferencia un vídeo impactante de uno olvidable está en la sala de edición — y ahí trabajo con las mismas herramientas que Hollywood.</p>
 <p>DaVinci Resolve Studio es el software de referencia mundial, usado en cine y televisión. Tu proyecto recibe ese mismo nivel de cuidado.</p>
 <div class="dv-feats">
-<div class="dv-feat"><span class="dv-feat-ico">🎨</span><div><span class="dv-feat-ttl">Color Grading Cinematográfico</span><p class="dv-feat-dsc">Corrección de color precisa que transforma imágenes en escenas con carácter propio.</p></div></div>
-<div class="dv-feat"><span class="dv-feat-ico">✂️</span><div><span class="dv-feat-ttl">Montaje de Alto Impacto</span><p class="dv-feat-dsc">Edición dinámica sincronizada con la música. Cada corte refuerza la emoción.</p></div></div>
-<div class="dv-feat"><span class="dv-feat-ico">🔊</span><div><span class="dv-feat-ttl">Mezcla de Audio</span><p class="dv-feat-dsc">Música con licencia, efectos ambientales y tratamiento de audio profesional.</p></div></div>
-<div class="dv-feat"><span class="dv-feat-ico">📤</span><div><span class="dv-feat-ttl">Entrega Optimizada</span><p class="dv-feat-dsc">Exportación en los formatos exactos que necesitas — redes, web o pantalla grande.</p></div></div>
+<div class="dv-feat"><span class="dv-feat-ico"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2.7 17.7 8.4a8 8 0 1 1-11.4 0z"/></svg></span><div><span class="dv-feat-ttl">Color Grading Cinematográfico</span><p class="dv-feat-dsc">Corrección de color precisa que transforma imágenes en escenas con carácter propio.</p></div></div>
+<div class="dv-feat"><span class="dv-feat-ico"><svg class="ic" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.1" y2="15.9"/><line x1="14.5" y1="14.5" x2="20" y2="20"/><line x1="8.1" y1="8.1" x2="12" y2="12"/></svg></span><div><span class="dv-feat-ttl">Montaje de Alto Impacto</span><p class="dv-feat-dsc">Edición dinámica sincronizada con la música. Cada corte refuerza la emoción.</p></div></div>
+<div class="dv-feat"><span class="dv-feat-ico"><svg class="ic" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg></span><div><span class="dv-feat-ttl">Mezcla de Audio</span><p class="dv-feat-dsc">Música con licencia, efectos ambientales y tratamiento de audio profesional.</p></div></div>
+<div class="dv-feat"><span class="dv-feat-ico"><svg class="ic" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></span><div><span class="dv-feat-ttl">Entrega Optimizada</span><p class="dv-feat-dsc">Exportación en los formatos exactos que necesitas — redes, web o pantalla grande.</p></div></div>
 </div>
 </div>
 <div class="dv-right">
 <div class="dv-logo-wrap">
-<img src="/davinci.jpg" alt="DaVinci Resolve Studio" loading="lazy" decoding="async" style="width:100%;display:block;border:1px solid rgba(201,168,76,.15);filter:brightness(.95)">
+<img src="/davinci.jpg" alt="Edición de vídeo aéreo con DaVinci Resolve Studio" width="900" height="616" loading="lazy" decoding="async" style="width:100%;display:block;border:1px solid rgba(201,168,76,.15);filter:brightness(.95)">
 <span class="dv-lbl">DaVinci Resolve Studio</span>
 <span class="dv-sub">Professional Grade Editing</span>
 </div>
@@ -643,9 +651,9 @@ Hablemos
 <h2>Resultados que<br><em>se sienten en segundos</em></h2>
 </div>
 <div class="results-grid">
-<div class="result-card reveal d1"><span class="result-icon">🎯</span><span class="result-metric">+∞</span><span class="result-title">Alcance Visual</span><p class="result-desc">Llegas a quien antes no te veía. El dron pone tu proyecto en el mapa de una manera que ninguna cámara en tierra puede igualar.</p></div>
-<div class="result-card reveal d2"><span class="result-icon">⚡</span><span class="result-metric">3"</span><span class="result-title">Tiempo de Enganche</span><p class="result-desc">Tres segundos. Es lo que tarda un vídeo FPV bien hecho en atrapar al espectador y mantenerlo pegado a la pantalla.</p></div>
-<div class="result-card reveal d3"><span class="result-icon">🛡️</span><span class="result-metric">RC</span><span class="result-title">Seguro & Certificado</span><p class="result-desc">Seguro de responsabilidad civil, certificado A1/A3 de AESA y gestión de permisos incluida. Vuelas tranquilo — yo me encargo de todo.</p></div>
+<div class="result-card reveal d1"><span class="result-icon"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><span class="result-metric">360°</span><span class="result-title">Alcance Visual</span><p class="result-desc">Llegas a quien antes no te veía. El dron pone tu proyecto en el mapa de una manera que ninguna cámara en tierra puede igualar.</p></div>
+<div class="result-card reveal d2"><span class="result-icon"><svg class="ic" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="result-metric">3"</span><span class="result-title">Tiempo de Enganche</span><p class="result-desc">Tres segundos. Es lo que tarda un vídeo FPV bien hecho en atrapar al espectador y mantenerlo pegado a la pantalla.</p></div>
+<div class="result-card reveal d3"><span class="result-icon"><svg class="ic" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><span class="result-metric">RC</span><span class="result-title">Seguro & Certificado</span><p class="result-desc">Seguro de responsabilidad civil, certificado A1/A3 de AESA y gestión de permisos incluida. Vuelas tranquilo — yo me encargo de todo.</p></div>
 </div>
 </section>
 
@@ -685,9 +693,7 @@ Hablemos
     </div>
   </div>
 </div>
-<div class="pf-grid-single">
-  <div class="pf-placeholder"><div class="pf-placeholder-inner"><p>Tu proyecto aquí</p><small>¿Quieres que tu marca, destino o evento sea el próximo en este portfolio?</small><a href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20quiero%20que%20mi%20proyecto%20aparezca%20en%20tu%20portfolio." target="_blank" rel="noopener">Contáctame →</a></div></div>
-</div>
+<div style="text-align:center;padding:3.5rem 1.2rem"><p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:#8A8478;font-size:1.15rem;margin-bottom:1rem">¿Tu proyecto, el próximo?</p><a href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20quiero%20que%20mi%20proyecto%20aparezca%20en%20tu%20portfolio." target="_blank" rel="noopener" style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#C9A84C;text-decoration:none;border-bottom:1px solid #7A6328;padding-bottom:3px">Hablemos →</a></div>
 </section>
 
 <div class="divider"><div class="divider-line"><div class="divider-diamond"></div></div></div>
@@ -699,12 +705,12 @@ Hablemos
 <h2>Si tienes algo que mostrar,<br><em>yo lo elevo</em></h2>
 </div>
 <div class="niches-grid">
-<div class="niche-card reveal d1"><span class="niche-icon">🏛️</span><span class="niche-name">Turismo & Destinos</span><span class="niche-price">Presupuesto personalizado</span><p class="niche-desc">Ayuntamientos, oficinas de turismo, hoteles rurales. Pon tu destino en el mapa con imágenes que nadie puede ignorar.</p></div>
-<div class="niche-card reveal d2"><span class="niche-icon">🏠</span><span class="niche-name">Inmobiliarias</span><span class="niche-price">Presupuesto personalizado</span><p class="niche-desc">Viviendas, fincas, promociones. El vuelo FPV muestra entorno, accesos y escala como ninguna fotografía puede hacer.</p></div>
-<div class="niche-card reveal d3"><span class="niche-icon">🎊</span><span class="niche-name">Eventos & Bodas</span><span class="niche-price">Presupuesto personalizado</span><p class="niche-desc">Bodas, festivales, conciertos, ferias. Momentos únicos desde un ángulo que los invitados nunca verán.</p></div>
-<div class="niche-card reveal d4"><span class="niche-icon">🎭</span><span class="niche-name">Cultura & Tradición</span><span class="niche-price">Presupuesto personalizado</span><p class="niche-desc">Carnaval, semana santa, festividades locales. El patrimonio visto desde el cielo cobra una dimensión nueva.</p></div>
-<div class="niche-card reveal d5"><span class="niche-icon">🏢</span><span class="niche-name">Marcas & Corporativo</span><span class="niche-price">Presupuesto personalizado</span><p class="niche-desc">Presentaciones, redes sociales, contenido de marca. Diferénciate con vídeo aéreo que transmite ambición.</p></div>
-<div class="niche-card reveal d6"><span class="niche-icon">🌿</span><span class="niche-name">Naturaleza & Sport</span><span class="niche-price">Presupuesto personalizado</span><p class="niche-desc">Rutas, parques naturales, deportes al aire libre. El FPV sigue la acción donde ninguna cámara puede ir.</p></div>
+<div class="niche-card reveal d1"><span class="niche-icon"><svg class="ic" viewBox="0 0 24 24"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></span><span class="niche-name">Turismo & Destinos</span><span class="niche-price">Presupuesto personalizado</span><p class="niche-desc">Ayuntamientos, oficinas de turismo, hoteles rurales. Pon tu destino en el mapa con imágenes que nadie puede ignorar.</p></div>
+<div class="niche-card reveal d2"><span class="niche-icon"><svg class="ic" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span><span class="niche-name">Inmobiliarias</span><span class="niche-price">Presupuesto personalizado</span><p class="niche-desc">Viviendas, fincas, promociones. El vuelo FPV muestra entorno, accesos y escala como ninguna fotografía puede hacer.</p></div>
+<div class="niche-card reveal d3"><span class="niche-icon"><svg class="ic" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg></span><span class="niche-name">Eventos & Bodas</span><span class="niche-price">Presupuesto personalizado</span><p class="niche-desc">Bodas, festivales, conciertos, ferias. Momentos únicos desde un ángulo que los invitados nunca verán.</p></div>
+<div class="niche-card reveal d4"><span class="niche-icon"><svg class="ic" viewBox="0 0 24 24"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/><path d="M9 18V5l12-2v13"/></svg></span><span class="niche-name">Cultura & Tradición</span><span class="niche-price">Presupuesto personalizado</span><p class="niche-desc">Carnaval, semana santa, festividades locales. El patrimonio visto desde el cielo cobra una dimensión nueva.</p></div>
+<div class="niche-card reveal d5"><span class="niche-icon"><svg class="ic" viewBox="0 0 24 24"><path d="M6 22V4a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v18"/><path d="M6 12H4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2"/><path d="M18 9h2a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-2"/><path d="M10 7h4M10 11h4M10 15h4"/></svg></span><span class="niche-name">Marcas & Corporativo</span><span class="niche-price">Presupuesto personalizado</span><p class="niche-desc">Presentaciones, redes sociales, contenido de marca. Diferénciate con vídeo aéreo que transmite ambición.</p></div>
+<div class="niche-card reveal d6"><span class="niche-icon"><svg class="ic" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></span><span class="niche-name">Naturaleza & Sport</span><span class="niche-price">Presupuesto personalizado</span><p class="niche-desc">Rutas, parques naturales, deportes al aire libre. El FPV sigue la acción donde ninguna cámara puede ir.</p></div>
 </div>
 </section>
 
@@ -716,10 +722,10 @@ Hablemos
 <h2>Extremadura<br><em>y más allá</em></h2>
 <p class="zones-intro">Base en Badajoz. Disponible en toda Extremadura y desplazamiento a cualquier punto de España.</p>
 <div class="zones-grid">
-<div class="zone-card reveal d1"><span class="zone-icon">🏛️</span><span class="zone-name">Badajoz</span><p class="zone-desc">Base de operaciones. Ciudad, casco histórico, entorno rural y toda la provincia.</p></div>
-<div class="zone-card reveal d2"><span class="zone-icon">🌿</span><span class="zone-name">Extremadura</span><p class="zone-desc">Naturaleza, patrimonio, pueblos y paisajes de toda la comunidad autónoma.</p></div>
-<div class="zone-card reveal d3"><span class="zone-icon">🇪🇸</span><span class="zone-name">España</span><p class="zone-desc">Me desplazo a cualquier punto de la península con coste adicional de viaje.</p></div>
-<div class="zone-card reveal d4"><span class="zone-icon">✈️</span><span class="zone-name">Internacional</span><p class="zone-desc">¿Tienes un proyecto fuera de España? Hablamos y buscamos la fórmula.</p></div>
+<div class="zone-card reveal d1"><span class="zone-icon"><svg class="ic" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span class="zone-name">Badajoz</span><p class="zone-desc">Base de operaciones. Ciudad, casco histórico, entorno rural y toda la provincia.</p></div>
+<div class="zone-card reveal d2"><span class="zone-icon"><svg class="ic" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></span><span class="zone-name">Extremadura</span><p class="zone-desc">Naturaleza, patrimonio, pueblos y paisajes de toda la comunidad autónoma.</p></div>
+<div class="zone-card reveal d3"><span class="zone-icon"><svg class="ic" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></span><span class="zone-name">España</span><p class="zone-desc">Me desplazo a cualquier punto de la península con coste adicional de viaje.</p></div>
+<div class="zone-card reveal d4"><span class="zone-icon"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg></span><span class="zone-name">Internacional</span><p class="zone-desc">¿Tienes un proyecto fuera de España? Hablamos y buscamos la fórmula.</p></div>
 </div>
 <p class="zones-note">¿Tu proyecto está fuera de Extremadura? <strong>Me desplazo con coste adicional.</strong> Cuéntame dónde y lo valoramos.</p>
 </section>
@@ -729,14 +735,14 @@ Hablemos
 <!-- PROCESO -->
 <section class="process-section" id="proceso">
 <div class="reveal">
-<span class="section-label" style="text-align:center;display:block">Cómo trabajamos</span>
+<span class="section-label" style="text-align:center;display:block">Cómo trabajo</span>
 <h2>Del primer mensaje<br><em>al vídeo final</em></h2>
 </div>
 <div class="proc-grid">
 <div class="proc-line"><div class="proc-line-inner"></div></div>
 <div class="proc-step reveal d1"><div class="proc-num">01</div><h4 class="proc-title">Escucho tu visión</h4><p class="proc-desc">Me cuentas qué quieres conseguir, para quién y cuándo. Sin formularios — una conversación real.</p></div>
 <div class="proc-step reveal d2"><div class="proc-num">02</div><h4 class="proc-title">Presupuesto a medida</h4><p class="proc-desc">Propuesta honesta adaptada a tu proyecto. Primera colaboración con condiciones especiales.</p></div>
-<div class="proc-step reveal d3"><div class="proc-num">03</div><h4 class="proc-title">El vuelo</h4><p class="proc-desc">Estudiamos la luz y el espacio. Cada toma es única — la aprovechamos al máximo.</p></div>
+<div class="proc-step reveal d3"><div class="proc-num">03</div><h4 class="proc-title">El vuelo</h4><p class="proc-desc">Estudio la luz y el espacio. Cada toma es única — la aprovecho al máximo.</p></div>
 <div class="proc-step reveal d4"><div class="proc-num">04</div><h4 class="proc-title">Edición & Entrega</h4><p class="proc-desc">Color grading en DaVinci Resolve Studio y entrega optimizada. Listo para publicar.</p></div>
 </div>
 </section>
@@ -749,10 +755,10 @@ Hablemos
 <h2>Equipo que<br><em>no deja nada al azar</em></h2>
 <p class="gear-intro">Cada vuelo respaldado por tecnología de primer nivel.</p>
 <div class="gear-grid">
-<div class="gear-card reveal d1"><span class="gear-icon">🚁</span><span class="gear-name">Apex Evo DC 5"</span><span class="gear-type">FPV · Freestyle & Cine</span><p class="gear-desc">Dron FPV de 5 pulgadas construido para vuelos cinematográficos suaves y maniobras que ningún otro dron puede ejecutar.</p></div>
-<div class="gear-card reveal d2"><span class="gear-icon">🎬</span><span class="gear-name">DJI Avata 2</span><span class="gear-type">FPV · Interior & Proximidad</span><p class="gear-desc">FPV compacto ideal para espacios reducidos, interiores y tomas de proximidad con máxima estabilidad y seguridad.</p></div>
-<div class="gear-card reveal d3"><span class="gear-icon">✈️</span><span class="gear-name">DJI Mini 5 Pro</span><span class="gear-type">Estabilizado · Cinematográfico</span><p class="gear-desc">Dron estabilizado ultraligero para tomas aéreas suaves, panorámicas y planos de establecimiento de alta calidad.</p></div>
-<div class="gear-card reveal d4"><span class="gear-icon">📷</span><span class="gear-name">DJI Action 6</span><span class="gear-type">Cámara · 4K HDR</span><p class="gear-desc">Cámara de acción profesional con grabación 4K HDR, estabilización superior y amplio rango dinámico para cualquier condición.</p></div>
+<div class="gear-card reveal d1"><span class="gear-icon"><svg class="ic" viewBox="0 0 24 24"><circle cx="5" cy="5" r="2.4"/><circle cx="19" cy="5" r="2.4"/><circle cx="5" cy="19" r="2.4"/><circle cx="19" cy="19" r="2.4"/><path d="M6.8 6.8 9.5 9.5M17.2 6.8 14.5 9.5M6.8 17.2 9.5 14.5M17.2 17.2 14.5 14.5"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></span><span class="gear-name">Apex Evo DC 5"</span><span class="gear-type">FPV · Freestyle & Cine</span><p class="gear-desc">Dron FPV de 5 pulgadas construido para vuelos cinematográficos suaves y maniobras que ningún otro dron puede ejecutar.</p></div>
+<div class="gear-card reveal d2"><span class="gear-icon"><svg class="ic" viewBox="0 0 24 24"><circle cx="5" cy="5" r="2.4"/><circle cx="19" cy="5" r="2.4"/><circle cx="5" cy="19" r="2.4"/><circle cx="19" cy="19" r="2.4"/><path d="M6.8 6.8 9.5 9.5M17.2 6.8 14.5 9.5M6.8 17.2 9.5 14.5M17.2 17.2 14.5 14.5"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></span><span class="gear-name">DJI Avata 2</span><span class="gear-type">FPV · Interior & Proximidad</span><p class="gear-desc">FPV compacto ideal para espacios reducidos, interiores y tomas de proximidad con máxima estabilidad y seguridad.</p></div>
+<div class="gear-card reveal d3"><span class="gear-icon"><svg class="ic" viewBox="0 0 24 24"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg></span><span class="gear-name">DJI Mini 5 Pro</span><span class="gear-type">Estabilizado · Cinematográfico</span><p class="gear-desc">Dron estabilizado ultraligero para tomas aéreas suaves, panorámicas y planos de establecimiento de alta calidad.</p></div>
+<div class="gear-card reveal d4"><span class="gear-icon"><svg class="ic" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3"/></svg></span><span class="gear-name">DJI Action 6</span><span class="gear-type">Cámara · 4K HDR</span><p class="gear-desc">Cámara de acción profesional con grabación 4K HDR, estabilización superior y amplio rango dinámico para cualquier condición.</p></div>
 </div>
 </section>
 
@@ -774,6 +780,7 @@ Hablemos
 <div class="faq-item reveal d2" tabindex="0" role="button" aria-expanded="false"><div class="faq-question">¿En qué formato entrego los vídeos?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Me adapto a lo que necesites. Si el vídeo va a redes sociales, exporto en el formato óptimo para cada plataforma. Si va a web, pantalla o presentación, ajusto en consecuencia. Para eso está DaVinci Resolve Studio.</p></div></div>
 <div class="faq-item reveal d3" tabindex="0" role="button" aria-expanded="false"><div class="faq-question">¿Tienes que prepararme algo yo antes del rodaje?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>No necesariamente. Me encargo de todo: localización, planificación del vuelo, guion visual y logística. Si tienes alguna idea en mente, me encanta escucharla. Lo importante es que el resultado sea exactamente lo que necesitas.</p></div></div>
 <div class="faq-item reveal d4" tabindex="0" role="button" aria-expanded="false"><div class="faq-question">¿Por qué elegirte a ti y no a una empresa grande?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Las empresas grandes son frías y se ciñen a un contrato. Yo doy un trato cercano y totalmente personalizado. Estoy atento a cada detalle, soy resolutivo — si surge un problema encuentro la solución — y no paro hasta conseguir el mejor resultado posible.</p></div></div>
+<div class="faq-item reveal d1" tabindex="0" role="button" aria-expanded="false"><div class="faq-question">¿Cuánta experiencia tienes con proyectos profesionales?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Tres años volando, con trabajos para eventos culturales en Badajoz y proyectos por toda Extremadura que puedes ver en el portfolio y en Instagram. Soy honesto: si tu proyecto necesita algo que no haya hecho antes, te lo digo — y buscamos juntos la mejor solución. Prefiero eso a prometer lo que no puedo cumplir.</p></div></div>
 </div>
 </section>
 
@@ -809,20 +816,20 @@ Hablemos
 <p class="contact-intro">Sin compromisos. Te respondo en menos de 24 horas.</p>
 <div class="contact-wrap">
 <div class="contact-info">
-<div class="contact-info-item"><span class="contact-info-icon">📱</span><div><span class="contact-info-label">WhatsApp</span><span class="contact-info-val">+34 633 210 907</span></div></div>
-<div class="contact-info-item"><span class="contact-info-icon">✉️</span><div><span class="contact-info-label">Email</span><span class="contact-info-val">torcuafpv@gmail.com</span></div></div>
-<div class="contact-info-item"><span class="contact-info-icon">📍</span><div><span class="contact-info-label">Base de operaciones</span><span class="contact-info-val">Badajoz, Extremadura</span></div></div>
-<div class="contact-info-item"><span class="contact-info-icon">⏱️</span><div><span class="contact-info-label">Tiempo de respuesta</span><span class="contact-info-val">Menos de 24 horas</span></div></div>
+<div class="contact-info-item"><span class="contact-info-icon"><svg class="ic" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8A8.5 8.5 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5z"/></svg></span><div><span class="contact-info-label">WhatsApp</span><span class="contact-info-val">+34 633 210 907</span></div></div>
+<div class="contact-info-item"><span class="contact-info-icon"><svg class="ic" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span><div><span class="contact-info-label">Email</span><span class="contact-info-val">torcuafpv@gmail.com</span></div></div>
+<div class="contact-info-item"><span class="contact-info-icon"><svg class="ic" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><span class="contact-info-label">Base de operaciones</span><span class="contact-info-val">Badajoz, Extremadura</span></div></div>
+<div class="contact-info-item"><span class="contact-info-icon"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><div><span class="contact-info-label">Tiempo de respuesta</span><span class="contact-info-val">Menos de 24 horas</span></div></div>
 </div>
 <div>
 <form class="contact-form" onsubmit="handleForm(event)">
 <div class="form-row">
-<div class="form-group"><label class="form-label" for="f-nombre">Tu nombre</label><input id="f-nombre" class="form-input" type="text" placeholder="Nombre o empresa" required></div>
+<div class="form-group"><label class="form-label" for="f-nombre">Tu nombre</label><input id="f-nombre" class="form-input" type="text" placeholder="Nombre o empresa" autocomplete="name" required></div>
 <div class="form-group"><label class="form-label" for="f-contacto">Teléfono o email</label><input id="f-contacto" class="form-input" type="text" placeholder="+34 600 000 000" required></div>
 </div>
 <div class="form-group"><label class="form-label" for="f-tipo">Tipo de proyecto</label><select id="f-tipo" class="form-select form-input"><option value="">Selecciona una opción</option><option>Turismo o destino</option><option>Inmobiliaria o finca</option><option>Evento o boda</option><option>Marca o corporativo</option><option>Cultura o festividad</option><option>Naturaleza o deporte</option><option>Otro</option></select></div>
 <div class="form-group"><label class="form-label" for="f-fecha">Fecha aproximada</label><input id="f-fecha" class="form-input" type="text" placeholder="Ej: junio 2026 o sin fecha aún"></div>
-<div class="form-group"><label class="form-label" for="f-mensaje">Cuéntame tu proyecto</label><textarea id="f-mensaje" class="form-textarea form-input" placeholder="Qué necesitas, dónde, cualquier detalle..."></textarea></div>
+<div class="form-group"><label class="form-label" for="f-mensaje">Cuéntame tu proyecto</label><textarea id="f-mensaje" class="form-textarea form-input" placeholder="Qué necesitas, dónde, cualquier detalle..." required></textarea></div>
 <button type="submit" class="form-submit"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Enviar por WhatsApp</button>
 <p class="form-note">Al enviar, abrirás WhatsApp con tu mensaje ya redactado.</p>
 </form>
@@ -851,16 +858,17 @@ Hablemos
 <span class="section-label" style="display:block;text-align:center">¿Listo para despegar?</span>
 <h2>Dale a tu proyecto<br><em>la perspectiva que merece</em></h2>
 <p>Un mensaje es suficiente para empezar.</p>
-<a href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20quiero%20ampliar%20el%20alcance%20de%20mi%20proyecto%20con%20vídeo%20FPV.%20¿Podemos%20hablar?" class="btn-big" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Escríbeme por WhatsApp</a>
+<a href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20quiero%20ampliar%20el%20alcance%20de%20mi%20proyecto%20con%20vídeo%20FPV.%20¿Podemos%20hablar?" class="btn-big" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Quiero verlo desde el aire</a>
 </section>
 
+</main>
 <footer>
 <div class="footer-logo"><img class="brand-mark" src="/logo-wing.png" alt="" aria-hidden="true">Torcua<span>FPV</span></div>
 <div class="footer-links">
 <a href="mailto:torcuafpv@gmail.com">torcuafpv@gmail.com</a>
 <a href="https://wa.me/34633210907" target="_blank" rel="noopener">+34 633 210 907</a>
 <a href="https://www.instagram.com/torcuafpv" target="_blank" rel="noopener">@torcuafpv</a>
-<a href="#">Badajoz, Extremadura</a>
+<a href="#contacto">Badajoz, Extremadura</a>
 <a href="/aviso-legal.html">Aviso Legal</a>
 <a href="/privacidad.html">Privacidad</a>
 </div>
@@ -908,6 +916,7 @@ e.target.addEventListener('transitionend',()=>{e.target.style.willChange='auto'}
 allReveal.forEach(el=>io.observe(el));
 
 function animateCounter(el,target,duration){
+if(REDUCE){el.textContent=target+(target>=100?'+':'');return;}
 let start=0;const step=target/((duration/1000)*60);
 const timer=setInterval(()=>{
 start+=step;if(start>=target){start=target;clearInterval(timer)}
@@ -936,12 +945,12 @@ const tipo=document.getElementById('f-tipo').value||'';
 const fecha=document.getElementById('f-fecha').value||'';
 const mensaje=document.getElementById('f-mensaje').value||'';
 const txt=`Hola Torcua, te escribo desde tu web.%0A%0A*Nombre:* ${encodeURIComponent(nombre)}%0A*Contacto:* ${encodeURIComponent(contacto)}%0A*Tipo de proyecto:* ${encodeURIComponent(tipo)}%0A*Fecha:* ${encodeURIComponent(fecha)}%0A%0A*Proyecto:* ${encodeURIComponent(mensaje)}`;
-window.open(`https://wa.me/34633210907?text=${txt}`,'_blank');
+if(!nombre.trim()||!contacto.trim()){alert('Por favor, dime tu nombre y un teléfono o email para poder responderte.');return;}var _u=`https://wa.me/34633210907?text=${txt}`;var _w=window.open(_u,'_blank');if(!_w)window.location.href=_u;
 }
 
 const loader=document.getElementById('loader');
-const loaderLogo=document.getElementById('loaderLogo');
-const loaderTagline=document.getElementById('loaderTagline');
+
+
 (function(){
 const cv=document.getElementById('loader-canvas');
 const cx=cv.getContext('2d');

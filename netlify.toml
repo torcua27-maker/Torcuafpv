@@ -1,4 +1,4 @@
-# Sitio estático (un solo index.html). Sin build.
+# Sitio estático (index.html + páginas legales). Sin build.
 [build]
   publish = "."
 
@@ -9,8 +9,10 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; frame-src https://player.vimeo.com; child-src https://player.vimeo.com; connect-src 'self'; base-uri 'self'; object-src 'none'"
 
-# Caché larga para imágenes (tienen hash de contenido implícito por nombre)
+# Caché larga para imágenes
 [[headers]]
   for = "*.jpg"
   [headers.values]
@@ -18,5 +20,10 @@
 
 [[headers]]
   for = "*.JPG"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.png"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"

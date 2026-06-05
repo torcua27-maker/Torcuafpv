@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://torcuafpv.netlify.app/sitemap.xml
