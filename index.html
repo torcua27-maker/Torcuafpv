@@ -23,6 +23,7 @@
 <link rel="canonical" href="https://torcuafpv.netlify.app">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚁</text></svg>">
 <meta name="theme-color" content="#C9A84C">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"TorcuaFPV","description":"Piloto FPV cinematográfico en Badajoz, Extremadura. Vídeo aéreo para turismo, eventos, inmobiliarias, cultura y marcas.","url":"https://torcuafpv.netlify.app","image":"https://torcuafpv.netlify.app/og-image.jpg","email":"torcuafpv@gmail.com","telephone":"+34633210907","priceRange":"€€","founder":{"@type":"Person","name":"Torcuato"},"address":{"@type":"PostalAddress","addressLocality":"Badajoz","addressRegion":"Extremadura","addressCountry":"ES"},"geo":{"@type":"GeoCoordinates","latitude":38.8794,"longitude":-6.9707},"areaServed":[{"@type":"AdministrativeArea","name":"Extremadura"},{"@type":"Country","name":"España"}],"sameAs":["https://www.instagram.com/torcuafpv"],"knowsAbout":["Vídeo aéreo FPV","Dron cinematográfico","Postproducción DaVinci Resolve Studio"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Tenor+Sans&display=swap" rel="stylesheet">
@@ -143,6 +144,19 @@ nav.scrolled{background:rgba(0,0,0,.92);backdrop-filter:blur(16px);border-bottom
 .nav-cta{display:flex;align-items:center;gap:.55rem;background:#C9A84C;color:#000;font-family:'Tenor Sans',sans-serif;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;padding:.65rem 1.5rem;text-decoration:none;transition:all .25s;white-space:nowrap}
 .nav-cta:hover{background:#E8C96A;transform:translateY(-1px)}
 .nav-cta svg{width:15px;height:15px;flex-shrink:0}
+.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:none;border:0;cursor:pointer;padding:8px;z-index:210}
+.nav-burger span{display:block;width:100%;height:1.5px;background:#C9A84C;border-radius:2px;transition:transform .35s cubic-bezier(.16,1,.3,1),opacity .2s}
+.nav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mobile-menu{position:fixed;inset:0;z-index:205;background:rgba(0,0,0,.97);backdrop-filter:blur(14px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;opacity:0;visibility:hidden;transition:opacity .45s ease,visibility .45s ease}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu .mm-link{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:#F5F0E8;text-decoration:none;letter-spacing:.04em;transition:color .25s,letter-spacing .25s}
+.mobile-menu .mm-link:hover{color:#C9A84C;letter-spacing:.12em}
+.mobile-menu .mm-cta{margin-top:1.4rem;display:inline-flex;align-items:center;gap:.6rem;background:#C9A84C;color:#000;font-family:'Tenor Sans',sans-serif;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;padding:.95rem 2.2rem;text-decoration:none}
+.mobile-menu .mm-cta svg{width:16px;height:16px}
+@media(max-width:768px){.nav-cta{display:none}.nav-burger{display:flex}}
+@media(min-width:769px){.mobile-menu{display:none}}
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:7rem 2rem 9rem;overflow:hidden}
 .hero-video-bg{position:absolute;inset:0;z-index:0;overflow:hidden;background:#000}
 .hero-video-bg iframe{position:absolute;top:50%;left:50%;width:177.78vh;height:100vh;min-width:100%;min-height:56.25vw;transform:translate(-50%,-50%);pointer-events:none;opacity:.9}
@@ -479,6 +493,7 @@ footer{font-size:.95rem}
   .pf-grid-single{padding:3rem 1.2rem}
   .pf-media{width:320px;height:180px}
 }
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}html{scroll-behavior:auto!important}.reveal,.r-left,.r-right,.r-scale{opacity:1!important;transform:none!important}#particles,.cursor,.cursor-ring,.scroll-line{display:none!important}.hero-video-bg iframe{display:none}.about-frame img{transform:none!important}}
 </style>
 </head>
 <body>
@@ -513,7 +528,19 @@ footer{font-size:.95rem}
 Hablemos
 </a>
 </div>
+<button class="nav-burger" id="navBurger" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+<a class="mm-link" href="#quiensoy">Quién soy</a>
+<a class="mm-link" href="#portfolio">Portfolio</a>
+<a class="mm-link" href="#paraquien">Servicios</a>
+<a class="mm-link" href="#zonas">Zonas</a>
+<a class="mm-link" href="#equipo">Equipo</a>
+<a class="mm-link" href="#faq">FAQ</a>
+<a class="mm-link" href="#tarifas">Tarifas</a>
+<a class="mm-link" href="#contacto">Contacto</a>
+<a class="mm-cta" href="https://wa.me/34633210907?text=Hola%20Torcua%2C%20me%20interesa%20hablar%20sobre%20un%20proyecto." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Hablemos</a>
+</div>
 
 <section class="hero" id="inicio">
 <div class="hero-video-bg">
@@ -721,14 +748,14 @@ Hablemos
 <p class="faq-intro">Resuelvo tus dudas antes de que tengas que preguntar.</p>
 </div>
 <div class="faq-grid">
-<div class="faq-item reveal d1" onclick="this.classList.toggle('open')"><div class="faq-question">¿Cuánto tarda en estar listo el vídeo?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Normalmente entre 2 y 3 días desde el rodaje. Dependiendo de la complejidad del proyecto o del volumen de material, puede variar, pero siempre te doy una fecha estimada antes de empezar.</p></div></div>
-<div class="faq-item reveal d2" onclick="this.classList.toggle('open')"><div class="faq-question">¿Vuelas en interiores también?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Sí, tanto en interiores como en exteriores. Para interiores utilizo drones específicos más compactos y seguros, adaptados al espacio y a la presencia de personas.</p></div></div>
-<div class="faq-item reveal d3" onclick="this.classList.toggle('open')"><div class="faq-question">¿En qué zonas trabajas?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Principalmente en Extremadura. También me desplazo fuera a cualquier punto de España, con un coste adicional de desplazamiento que valoramos según el proyecto.</p></div></div>
-<div class="faq-item reveal d4" onclick="this.classList.toggle('open')"><div class="faq-question">¿Necesitas permisos para volar?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Depende del proyecto. En muchos casos solo es necesaria una comunicación al Ministerio del Interior, que gestiono yo directamente. Para proyectos más complejos trabajo con Panorámica, empresa especializada en permisos de vuelo.</p></div></div>
-<div class="faq-item reveal d1" onclick="this.classList.toggle('open')"><div class="faq-question">¿Qué pasa si el día del rodaje llueve?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Lo aplazamos a una fecha que venga bien para los dos. La seguridad y la calidad del resultado siempre van primero. Si el cliente necesita continuar por motivos de producción, lo valoramos juntos.</p></div></div>
-<div class="faq-item reveal d2" onclick="this.classList.toggle('open')"><div class="faq-question">¿En qué formato entrego los vídeos?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Me adapto a lo que necesites. Si el vídeo va a redes sociales, exporto en el formato óptimo para cada plataforma. Si va a web, pantalla o presentación, ajusto en consecuencia. Para eso está DaVinci Resolve Studio.</p></div></div>
-<div class="faq-item reveal d3" onclick="this.classList.toggle('open')"><div class="faq-question">¿Tienes que prepararme algo yo antes del rodaje?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>No necesariamente. Me encargo de todo: localización, planificación del vuelo, guion visual y logística. Si tienes alguna idea en mente, me encanta escucharla. Lo importante es que el resultado sea exactamente lo que necesitas.</p></div></div>
-<div class="faq-item reveal d4" onclick="this.classList.toggle('open')"><div class="faq-question">¿Por qué elegirte a ti y no a una empresa grande?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Las empresas grandes son frías y se ciñen a un contrato. Yo doy un trato cercano y totalmente personalizado. Estoy atento a cada detalle, soy resolutivo — si surge un problema encuentro la solución — y no paro hasta conseguir el mejor resultado posible.</p></div></div>
+<div class="faq-item reveal d1" tabindex="0" role="button" aria-expanded="false"><div class="faq-question">¿Cuánto tarda en estar listo el vídeo?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Normalmente entre 2 y 3 días desde el rodaje. Dependiendo de la complejidad del proyecto o del volumen de material, puede variar, pero siempre te doy una fecha estimada antes de empezar.</p></div></div>
+<div class="faq-item reveal d2" tabindex="0" role="button" aria-expanded="false"><div class="faq-question">¿Vuelas en interiores también?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Sí, tanto en interiores como en exteriores. Para interiores utilizo drones específicos más compactos y seguros, adaptados al espacio y a la presencia de personas.</p></div></div>
+<div class="faq-item reveal d3" tabindex="0" role="button" aria-expanded="false"><div class="faq-question">¿En qué zonas trabajas?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Principalmente en Extremadura. También me desplazo fuera a cualquier punto de España, con un coste adicional de desplazamiento que valoramos según el proyecto.</p></div></div>
+<div class="faq-item reveal d4" tabindex="0" role="button" aria-expanded="false"><div class="faq-question">¿Necesitas permisos para volar?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Depende del proyecto. En muchos casos solo es necesaria una comunicación al Ministerio del Interior, que gestiono yo directamente. Para proyectos más complejos trabajo con Panorámica, empresa especializada en permisos de vuelo.</p></div></div>
+<div class="faq-item reveal d1" tabindex="0" role="button" aria-expanded="false"><div class="faq-question">¿Qué pasa si el día del rodaje llueve?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Lo aplazamos a una fecha que venga bien para los dos. La seguridad y la calidad del resultado siempre van primero. Si el cliente necesita continuar por motivos de producción, lo valoramos juntos.</p></div></div>
+<div class="faq-item reveal d2" tabindex="0" role="button" aria-expanded="false"><div class="faq-question">¿En qué formato entrego los vídeos?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Me adapto a lo que necesites. Si el vídeo va a redes sociales, exporto en el formato óptimo para cada plataforma. Si va a web, pantalla o presentación, ajusto en consecuencia. Para eso está DaVinci Resolve Studio.</p></div></div>
+<div class="faq-item reveal d3" tabindex="0" role="button" aria-expanded="false"><div class="faq-question">¿Tienes que prepararme algo yo antes del rodaje?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>No necesariamente. Me encargo de todo: localización, planificación del vuelo, guion visual y logística. Si tienes alguna idea en mente, me encanta escucharla. Lo importante es que el resultado sea exactamente lo que necesitas.</p></div></div>
+<div class="faq-item reveal d4" tabindex="0" role="button" aria-expanded="false"><div class="faq-question">¿Por qué elegirte a ti y no a una empresa grande?<span class="faq-arrow">+</span></div><div class="faq-answer"><p>Las empresas grandes son frías y se ciñen a un contrato. Yo doy un trato cercano y totalmente personalizado. Estoy atento a cada detalle, soy resolutivo — si surge un problema encuentro la solución — y no paro hasta conseguir el mejor resultado posible.</p></div></div>
 </div>
 </section>
 
@@ -820,6 +847,7 @@ Hablemos
 <p class="footer-copy">© <span id="yr">2026</span> TorcuaFPV</p>
 </footer><script>var _y=document.getElementById("yr");if(_y)_y.textContent=new Date().getFullYear();</script>
 <script>
+var REDUCE=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const canvas=document.getElementById('particles');
 const ctx=canvas.getContext('2d');
 let W,H,pts=[];
@@ -841,7 +869,7 @@ if(d<100){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[
 }
 requestAnimationFrame(draw);
 }
-draw();
+if(!REDUCE)draw();
 
 const nav=document.getElementById('navbar');
 window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60),{passive:true});
@@ -1125,7 +1153,7 @@ window.addEventListener('load',()=>{
 setTimeout(()=>{
 running=false;
 loader.classList.add('hidden');
-},3000);
+},REDUCE?150:3000);
 });
 })();
 
@@ -1175,7 +1203,7 @@ parallaxItems.push({el,speed:.12});
 const heroVideo=document.querySelector('.hero-video-bg');
 const heroSection=document.querySelector('.hero');
 let scrollRafPending=false;
-function onScrollEffects(){
+function onScrollEffects(){if(REDUCE){scrollRafPending=false;return;}
 parallaxItems.forEach(item=>{
 const rect=item.el.getBoundingClientRect();
 if(rect.top<window.innerHeight&&rect.bottom>0){
@@ -1298,6 +1326,22 @@ onScrollEffects();
     if(!rafId)rafId=requestAnimationFrame(update);
   },{passive:true});
   update();
+})();
+</script>
+<script>
+(function(){
+var b=document.getElementById('navBurger'),m=document.getElementById('mobileMenu');
+if(b&&m){
+function closeM(){b.classList.remove('open');m.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+b.addEventListener('click',function(){var o=m.classList.toggle('open');b.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');document.body.style.overflow=o?'hidden':'';});
+m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeM);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeM();});
+}
+document.querySelectorAll('.faq-item').forEach(function(it){
+function tg(){var o=it.classList.toggle('open');it.setAttribute('aria-expanded',o?'true':'false');}
+it.addEventListener('click',tg);
+it.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();tg();}});
+});
 })();
 </script>
 </body>
